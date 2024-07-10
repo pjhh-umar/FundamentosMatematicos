@@ -12,6 +12,10 @@
     <!-- This part is to load main.js -->
     <script type="text/javascript" src="../main.js"></script>
 
+
+    
+
+
     <!-- Next part is for new coomands -->
     <script>
       window.MathJax = {
@@ -30,14 +34,31 @@
     
     <!-- This part restart counter of cards to start at n+1 -->
     <style>
-      /* body.number-title{
-        counter-reset: temaCounter 1 subsectioncounter ;
+      /* body.number-title
+      {
+      counter-reset: temaCounter 1 subsectioncounter ;
       } */
-      h1.page-title-practica{
-        counter-reset:  sectionCounter 0 sectionCounter  subsectionCounter;
+      body.fondo-body{
+        counter-reset: temaCounter 1 sectionCounter;
       }
-    </style>
 
+      /* h1.page-number-title
+      {
+      counter-reset: sectionCounter 0;
+      }  */
+
+      h1.tema-number-title
+          {
+          counter-reset: sectionCounter 0;
+          } 
+
+      h1.number-title
+      {
+      counter-reset: subsectionCounter;
+      /* counter-reset: subsectionCounter; */
+      }
+
+    </style>
     <!-- CSS -->
 
     <link rel="stylesheet" , href="../style.css" />
@@ -86,25 +107,22 @@
 
 
 
-  <body class="fondo-body" ><h1 class="page-title"> Archivos primer examen parcial  </h1>   
+      <body class="fondo-body" ><h1 class="page-title-practica"> Prácticas Tercer Examen Parcial </h1>   
 
-    <!-- <div class="nota-box"><h1 class="title"> Archivos</h1> -->
+    <!-- <div class="nota-box"><h1 class="title"> Archivos</h1> 
       <div class="links-box" style = "font-family: 'Oldenburg', cursive; font-size: 150%;">
         <a href="../Archivos/EP1-GrupoA.xlsx" download> EP1-GrupoA.xlsx</a><br>
-        <!-- <a href="../Archivos/EP1-GrupoB.xlsx" download> EP1-GrupoB.xlsx</a><br> -->
         <a href="../Archivos/EP1-GrupoC.xlsx" download> EP1-GrupoC.xlsx</a>
       </div>
-      
-    <!-- </div> -->
+      </div> -->
     
         
 
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1>
+        <p>        </p>
+      </div>
 
-    <!-- <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-      <p></p>
-    </div>
-
-    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+    <!--<div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1>
       <p></p>
 
       <p><b>Sugerencia:</b> </p>
