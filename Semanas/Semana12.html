@@ -1,0 +1,799 @@
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams" /* this part is for numbered equations */
+        }
+      };
+    </script>
+
+    
+    <!-- This part is for using single $ for latex input, instead of \(\) -->
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+    .lista
+        {
+            counter-reset: listaCounter 0 sublistaCounter 1 subsublistaCounter 1 subsubsublistaCounter 1;
+        }
+        /* .sublista{
+            counter-reset: sublistaCounter 1  SubsublistaCounter;
+        } */
+        </style>
+
+    <style>
+            /* body.number-title
+            {
+            counter-reset: temaCounter 1 subsectioncounter ;
+            } */
+            body.fondo-body{
+              counter-reset: temaCounter 14 sectionCounter;
+            }
+
+            /* h1.page-number-title
+            {
+            counter-reset: sectionCounter 0;
+            }  */
+
+            h1.tema-number-title
+                {
+                counter-reset: sectionCounter 0;
+                } 
+
+            h1.number-title
+            {
+            counter-reset: subsectionCounter;
+            /* counter-reset: subsectionCounter; */
+            }
+
+
+
+    </style>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+    <!-- Top Menu  -->
+    
+          
+        <header class="main-header">
+        
+          <div class="logo_superior_umar">
+          <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+          <div class="contenedor_titulo">
+          <div class="title">Tecnologías de la Información y Comunicación II</div>
+          <div class="subtitle">Licenciatura en Administración Turística</div>
+          <div class="subsubtitle">Universidad del Mar, campus Huatulco </div>
+          <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+          </div>
+
+      
+        </header>
+
+    <nav class="top-nav">
+        <ul>
+        <li> <a href="https://pjhh-umar.github.io/TICDOS/Home.html"> Inicio  </a> </li>
+        <li> <a href="https://pjhh-umar.github.io/TICDOS/Informacion_General.html"> Información</a> </li>
+        <li> <a href="https://pjhh-umar.github.io/TICDOS/Notas.html"> Notas  </a> </li>
+        <!-- <li> <a href="https://pjhh-umar.github.io/TICDOS/Quizes.html"> Quizes  </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/TICDOS/Practicas.html">Prácticas</a></li> -->
+            <li> <a href="https://pjhh-umar.github.io/TICDOS/Examenes.html"> Archivos  </a> </li>
+<li> <a href="https://pjhh-umar.github.io/TICDOS/Links.html"> Links</a> </li>
+        </ul>
+    </nav>
+    
+    
+    <title> Semana 12  </title>
+    
+    </head>
+
+    <body class="fondo-body" >
+    
+    <div class="nota-box"> <h1 class="page-number-title"> Semana 12</h1> 
+
+    <h1 class="tema-number-title"> Paso del Modelo E-R al modelo físico de datos</h1>
+
+    <p>El objetivo del diagrama entidad-relación y las técnicas de normalización es proporcionar el
+      mejor diseño posible para una futura base de datos.</p>
+      
+    <p>En el <b>modelo relacional</b> la información
+      se almacena en forma de tablas con campos y registros, a modo de las relaciones, los atributos
+      y las tuplas del modelo relacional (coincidentes, a su vez, con las entidades y relaciones,
+      los atributos y las ocurrencias del diagrama entidad-relación).</p>
+
+      <p>
+        <div class="flexbox">
+          <img src="../Imagenes/BD/Comparación_paradigma_relacional.JPG" alt="", width="auto" height="auto">
+        </div>
+      </p>
+
+      
+
+      <h1 class="number-title"> Nomenclatura</h2>
+
+      <p>Se define una <b>nomenclatura</b> común a todos los elementos de
+        modelo físico y base de datos referidos. Para ello se usará como punto de partida la <b>notación
+        húngara</b>, definida en los años 70 por <b>Charles Simonyi</b>, programador húngaro de Xerox. Simonyi
+        estableció unas <b>reglas de nominación de variables</b> que aportaba información sobre su ámbito y
+        tipo de datos.</p>
+        
+        <p>Centrada originalmente en código fuente de programación, se presenta
+        a continuación una adaptación reducida de la notación húngara a los nombres de elementos de una
+        base de datos relacional, según los siguientes criterios:</p>
+
+        <p>
+          <ul>
+            <li><h3 class="title">Nombres de tablas.</h3> Se prefijarán con una "T" mayúscula (TEmpleado, TCliente).</li><br>
+            <li><h3 class="title">Nombres de campo.</h3> El prefijo, una letra minúscula, indicará el tipo de datos del campo, de
+              acuerdo a los siguientes tipos básicos:<br>   
+              <ul><br>
+                <li><h5 class="title"> Números </h5> "n" (nCantidad, nTotal), de number.</li><br>
+                <li><h5 class="title">Cadenas de caracteres: </h5> "c" (cNombre, cCiudad), de character.</li><br>
+                <li><h5 class="title">Fechas:</h5> "d" (dNacimiento, dAlta), de date. Nótese que ya no es necesario especificar
+                la palabra "fecha" (dFechaNacimiento sería redundante).</li><br>
+                <li><h5 class="title">Valores lógicos:</h5> "l" (lSexo, lPensionista), de logical.</li><br>
+                <li><h5 class="title">Objetos: </h5> "o" (oFoto, oDocumentoXML), de object.</li><br>
+              </ul>
+            </li>
+            <li><h3 class="title">Nombres (genérico).</h3> <h5 class="title">El primer carácter de un nombre siempre será una letra.</h5> Se evitará el uso de caracteres de alfabetos locales, como la eñe, la ç,
+              las vocales acentuadas o con diéresis, etc. Únicamente se aceptarán como válidos los siguientes
+              caracteres:<br>
+            <ul><br>
+              <li>Letras del alfabeto en mayúscula y minúscula.</li><br>
+              <li>Números.</li><br>
+              <li>Signo de subrayado o guion bajo ("_").</li><br>
+            </ul>
+           
+           </li> 
+          <li><h3 class="title">Identificadores.</h3> Todo campo creado para identificar de forma unívoca los registros de una
+            tabla (código de cliente, código de libro, código de país) llevará como sufijo las letras
+            "<h5 class="title">ID</h5>" (<h5 class="title">identificador</h5>) en mayúscula (nClienteID, nLibroID, nPaisID).</li>
+          </ul>
+        </p>
+
+        <p><h3 class="title"> Observaciones:</h3>
+      <ul>
+       <li>A pesar de que esta nomenclatura puede resultar insuficiente en el entorno de trabajo de
+        un SGBD real, nos servirá como marco de referencia común para los ejemplos de este texto.</li><br>
+       <li> Queda a discreción del lector ampliarla y/o adaptarla como convenga a sus necesidades.</li>
+      </ul>
+    </p>
+
+    <p><h3 class="title"> Ejemplo.</h3> Se muestra la tabla TSocio, resultante de la relación "Socio" vista anteriormente:</p>
+
+      <p>
+        <div class="flexbox">
+          <img src="../Imagenes/BD/Tabla_MR.JPG" alt="", width="auto" height="auto">
+        </div>
+      </p>
+
+    <h1 class="number-title"> Reglas de transformación</h2>
+    
+    <p>Se propone la siguiente representación gráfica de <b>modelo físico de datos</b>:</p>
+
+    <ul>
+      <li>Las <b>tablas</b> se representan como un rectángulo con el nombre de la tabla en la parte superior
+      y la lista de campos en la inferior. Los campos que conformen la clave primaria
+      irán subrayados y en orden:
+      <p>
+        <div class="flexbox">
+          <img src="../Imagenes/BD/Representacion_grafica_tabla.JPG" alt="", width="auto" height="auto">
+        </div>
+      </p>
+    </li>
+    <li>La <b>modalidad</b> irá implícita en la terminación de las líneas que relacionan tablas, del siguiente
+      modo:
+    </li>
+    </ul>
+    <center>
+      <table class="tabla-funciones">
+        <thead>
+          <tr>
+            <th>Modalidad
+            </th>
+            <th>Simbolo
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="nombre-funcion">Modalidad (O,1) 
+            </td>
+            <td>
+              <p><img src="../Imagenes/BD/Modalidad_0_1.JPG" alt="", width="auto" height="auto"></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="nombre-funcion">Modalidad (1,1)
+            </td>
+            <td>
+              <p><img src="../Imagenes/BD/Modalidad_1_1.JPG" alt="", width="auto" height="auto"></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="nombre-funcion">Modalidad (1,N)
+            </td>
+            <td>
+              <p><img src="../Imagenes/BD/Modalidad_1_N.JPG" alt="", width="auto" height="auto"></p>
+            </td>
+          </tr>
+          <tr>
+            <td class="nombre-funcion">Modalidad (0,N)</b> </p>
+            </td>
+            <td>
+              <p><img src="../Imagenes/BD/Modalidad_0_N.JPG" alt="", width="auto" height="auto"></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+
+
+  <p><h3 class="title">Observación:</h3> En algunos casos, <b>las relaciones generan tablas</b>. A la hora de asignar nombre a
+  dichas tablas se pueden seguir dos criterios:</p>
+  <p>
+    <ul>
+      <li>Utilizar un sustantivo que represente la acción implícita en la relación ("cliente contrata
+        servicio" generaría una tabla TContrato, "usuario compra producto" generaría TCompra).</li><br>
+      <li>Concatenar los nombres de las entidades relacionadas ("profesor imparte asignatura" generaría
+        TProfesorAsignatura).</li>
+    </ul>
+  </p>
+
+  <h2 class="number-title"> Transformación de componentes del diagrama entidad-relación en elementos del modelo
+    físico de datos</h2>
+
+<p>La transformación de componentes del diagrama entidad-relación en elementos del modelo
+  físico de datos sigue las siguientes reglas:
+</p>
+
+    <ul>
+      <li>Toda <b>entidad</b> se convierte en una <b>tabla</b>.</li><br>
+      <li>Todo <b>atributo</b> pasa a ser un <b>campo</b>. Los atributos marcados como parte de la clave primaria
+        se convierten en campos de la clave primaria de la nueva tabla, conservando su
+        orden.
+      </li><br>
+      <li>Las <b>relaciones</b> presentan casos basadas en su <b>cardinalidad</b>. Uno de los objetivos
+        fundamentales a la hora de diseñar una base de datos es <b>evitar la proliferación de valores
+        nulos</b>:
+      
+    <ul>
+      <li><p><h3 class="title">Relaciones de cardinalidad  M:N, ternarias y $n$-arias</h3>. Se convierten en <b>tabla</b>.
+        Su clave primaria será la concatenación de las claves primarias de las entidades que relacionan.<br>
+      </p>
+        <p><h3 class="title"> Ejemplo.</h3></p>
+        <p>
+          <div class="flexbox">
+            <img src="../Imagenes/BD/Relacion_M_N.JPG" alt="", width="100%" height="auto">
+          </div>
+        </p>
+      </li>
+      <li><p><h3 class="title">Relaciones de cardinalidad 1:N.</h3></p>
+        <p>En este caso se consideran tres posibilidades básicas:</p>
+
+      <ul>
+        <li><b>Si la relación tiene algún atributo, se convierte en tabla:</b>
+        <p><h3 class="title"> Ejemplo.</h3></p>
+        <p>
+          <div class="flexbox">
+            <img src="../Imagenes/BD/Relacion_1_N.png" alt="", width="100%" height="auto">
+          </div>
+        </p>
+        
+        <p>Es posible que se dé una circunstancia que haya que evaluar en el momento de la transformación:
+          si algún atributo de la relación debe formar parte de la clave primaria o no. En el presente ejemplo, 
+          la relación cuenta con tres atributos,“Fecha de contratación”,“Fecha de cancelación” y “Contrata seguro”.
+          Si la especificación de requisitos indica que un cliente puede contratar el mismo servicio más de una vez
+          (previa cancelación), la clave primaria de TContrato (formada por la concatenación de las claves primarias
+          de las entidades relacionadas) no garantizaría la unicidad (podría haber dos registros con el mismo 
+          nClienteID y nServicioID). En ese caso, se debería añadir la fecha de contratación a la clave 
+          (entendiendo que no puede haber un cliente que contrate el mismo servicio dos veces en la misma fecha):
+        </p>
+
+        <p><h3 class="title"> Ejemplo.</h3></p>
+        <p>
+          <div class="flexbox">
+            <img src="../Imagenes/BD/Relacion_1_N_.png" alt="", width="100%" height="auto">
+          </div>
+         </p>
+
+      <p>Este tipo de problemática tiene que ver con la dimensión temporal de la información almacenada en una base de datos, y suele requerir intervención especial por parte del analista, que evaluará cuál es la solución más eficiente para cada caso.</p>
+      </li><br>
+
+      <li><p><b>Si la modalidad mínima en el lado de cardinalidad 1 es 1 y no hay atributos, la relación desaparece. Los atributos que conforman la clave primaria de la entidad de modalidad máxima 1 se propagarán a la entidad de modalidad máxima N:</b></p>
+        <p><h3 class="title"> Ejemplo.</h3></p>  
+        <p>
+            <div class="flexbox">
+              <img src="../Imagenes/BD/Relacion_1_N_con_modalidad_1_1.png" alt="", width="100%" height="auto">
+            </div>
+           </p>
+        
+        <p>Debemos referirnos aquí a un nuevo concepto. Cuando el campo o campos que conforman la clave
+          primaria en una tabla aparecen en otra tabla distinta, se dice que conforman una <b>clave ajena</b> o 
+          <b>foránea</b>. En el ejemplo nEditorialID es clave primaria en TEditorial y clave ajena en TLibro.</p>
+      </li><br>
+
+      <li><p><b>Si la modalidad mínima en el lado de cardinalidad 1 es 0, la relación se convierte en tabla.</b></p>
+        <p><h3 class="title"> Ejemplo.</h3></p>
+        <p>
+          <div class="flexbox">
+            <img src="../Imagenes/BD/Relacion_1_N_con_modalidad_0_1.png" alt="", width="100%" height="auto">
+          </div>
+         </p>
+         <p><h3 class="title">Observación:</h3>
+          Si, en el presente ejemplo, se hubiese optado por propagar nDescuentoID a TCliente se podrían 
+          generar <b>valores nulos</b> en dicho campo, ya que no todos los clientes tienen descuento.
+
+         </p>
+      </li>
+      </ul>
+
+      <li><p><h3 class="title">Relaciones de cardinalidad 1:1</h3></p>
+        <p>Se trata del caso más complejo. <b>El objetivo es evitar a toda costa que queden campos sin valor</b>. Generalmente requiere un estudio detallado de las circunstancias concretas de cada caso, pero se pueden definir unas reglas para ciertas situaciones:</p>
+        <ul>
+          <li><p><b>Si ambas modalidades son (0, 1), la relación genera una tabla.</b></p>
+            <p>Obsérvese el siguiente ejemplo, donde se relacionan empleados con ubicaciones físicas dentro de una oficina, dándose la posibilidad de que haya empleados sin ubicación (personal de limpieza o mensajería) y ubicaciones vacías (mesas sin ocupar). Propagar cualquiera de las claves primarias a la otra entidad ocasionaría valores ausentes en campos (empleados sin valor en su código de ubicación o ubicaciones sin valor en su código de empleado):</p>
+
+            <p><h3 class="title"> Ejemplo.</h3></p>
+            <p>
+              <div class="flexbox">
+                <img src="../Imagenes/BD/Relacion_1_1_con_modalidades_0_1.png" alt="", width="100%" height="auto">
+              </div>
+             </p>
+          </li><br>
+          <li><p><b>Si una modalidad es (0, 1)  y la otra (1, 1), la relación desaparece y la clave de la entidad con modalidad mínima 1 se propaga a la entidad con modalidad mínima 0. </b></p>
+            <p>De forma más intuitiva, en el siguiente ejemplo se puede ver que todo chalet es un inmueble, pero no todo inmueble es un chalet, por lo que lo lógico es que la clave de “Inmueble” se propague a “Chalet”, y no al revés:
+            <p><h3 class="title"> Ejemplo.</h3></p>
+
+            <p>
+              <div class="flexbox">
+                <img src="../Imagenes/BD/Relacion_1_1_con_modalidad_0_1.png" alt="", width="100%" height="auto">
+              </div>
+             </p>
+             <p>Nótese que en este caso la clave primaria deTInmueble se propaga aTChalet como clave ajena, pero también funcionará en TChalet como clave primaria (se garantiza la unicidad), aunque se rellene con valores ya existentes en TInmueble. En este caso, en el que una entidad débil necesita de la clave primaria de la entidad fuerte de la que depende, se dice que hay una relación de dependencia en identificación. Cuando la entidad débil puede generar su propia clave primaria se habla de dependencia en existencia. Si, en vez de conformar la clave primaria de TChalet por completo, nInmuebleID fuese parte de una clave compuesta, la relación seguiría siendo de dependencia en identificación.</p>
+
+          </li><br>
+          <li><p><b>Si ambas modalidades son 1...1, pero una de las entidades es débil, la relación desaparece y la clave de la entidad fuerte
+             se propaga a la débil.</b></p>
+            <p>
+            Supongamos una relación 1 a 1 entre clientes y carteras de inversión donde la cartera de inversión se 
+            crea exclusivamente a partir del cliente:
+          </p>
+          <p><h3 class="title"> Ejemplo.</h3></p>
+           <p>
+              <div class="flexbox">
+                <img src="../Imagenes/BD/Relacion_1_1_con_entidad_debil.png" alt="", width="100%" height="auto">
+              </div>
+             </p>
+            </li><br>
+          <li><p><b>Si ambas modalidades son 1...1 y no hay entidades débiles, o bien si existe algún atributo de relación</b></p>
+             <p>Habrá que estudiar en detalle cuál es la opción adecuada en cada caso, dependiendo de la semántica de los datos almacenados y de otros detalles técnicos, como el número estimado de accesos a cada una de las tablas o el orden de consulta de la información.
+          </p></li><br>
+
+        </ul>
+
+    
+    </ul>
+      
+      </li>
+    </ul>
+   </li>
+  </ul>
+
+    
+
+</div>
+
+
+
+<!--
+    <h1 class="page-subtitle">Bases de datos</h1>
+
+    <div class="nota-box"><h1 class="number-title"> Bases de datos</h1>    
+        <p> Una base de datos es un conjunto de información organizada de forma lógica, de
+tal manera que es posible extraer toda la información o una parte de ella en
+cualquier momento.
+</p>
+<p>
+    Las bases de datos tienen importantes aplicaciones en la administración de
+empresas e instituciones públicas.
+</p>
+
+<p>
+    Las bases de datos requieren de un software que permita la administración de
+dicha base de datos. Estos programas especializados sirven como interfaz para
+que los usuarios puedan administrar como se estructura y optimiza toda la
+información recopilada.
+</p>
+
+<p>
+    Existen programas llamados sistemas gestores de bases de datos, abreviado
+SGBD (o DBMS por sus siglas en inglés Database Management System), que
+permiten almacenar y posteriormente acceder a los datos de forma rápida y
+estructurada.
+</p>
+
+<p>
+    Un sistema de gestión de bases de datos también permite realizar un gran número
+de operaciones relacionadas con la administración de la base de datos, tales
+como, supervisar la productividad, realizar ajustes, backups y restauración de los
+datos.
+</p>
+
+<p>
+    Entre los sistemas gestores de bases de datos (SGBD) más conocidos se
+encuentran: Microsoft Access y MySQL.
+</p>
+
+    </div>
+
+    <div class="nota-box">
+        <h1 class="number-title"> Bases de datos VS hojas de calculo</h1>  
+<p>
+    Las bases de datos y las hojas de cálculo son herramientas útiles para almacenar
+información. Las principales diferencias entre ambas son:
+</p>
+
+<ol>
+    <li>La forma de manipular y guardar la información.</li>
+    <li>La cantidad de datos que se pueden almacenar</li>
+    <li>La accesibilidad a esos datos almacenados.</li>
+</ol>
+
+<p>
+Las hojas de cálculo desde sus comienzos fueron diseñadas para un usuario. Son
+excelentes para uno o un pequeño número de usuarios que no necesitan utilizar un
+gran volumen de datos.
+</p>
+
+<p>
+    Las bases de datos, por otro lado, fueron creadas para almacenar gran cantidad
+de información organizada, permite acceder y consultar los datos de forma rápida
+y segura a muchos usuarios al mismo tiempo.
+</p>
+    </div>
+
+
+
+    <div class="nota-box">
+        <h1 class="number-title"> Bases de datos relacional </h1>  
+    
+        <p>
+            Las bases de datos se pueden clasificar de acuerdo a la función de la base de
+datos, o bien de acuerdo a su modelo de administración de datos. En este ultimo
+caso el modelo relacional es el modelo utilizado en la actualidad para representar
+problemas reales y administrar datos dinámicamente.
+        </p>
+
+        <p>
+            Una base de datos relacional es un conjunto de una o más tablas estructuradas
+en registros (filas o tuplas) y campos (columnas), que se vinculan entre sí por un
+campo en común, en ambos casos posee las mismas características como por
+ejemplo el nombre de campo, tipo y longitud; a este campo generalmente se le
+denomina ID, identificador o clave. A esta manera de construir bases de datos se le
+denomina modelo relacional
+        </p>
+        <p>
+            En un sistema de base de datos relacional, los datos se organizan en tablas
+estructuradas en registros y campos, vinculadas entre si por un campo en
+común.
+        </p>
+    </div>
+
+<div class="nota-box">
+    <h1 class="number-title"> Microsoft Access</h1>  
+
+<p>
+    Hoy en día muchas de las actividades que se desempeñan en una empresa
+requieren un seguimiento especial: administrar un inventario, seguir los pedidos de
+los clientes, tener un control de ingresos y gastos, son sólo algunas de ellas.
+</p>
+
+<p>
+    Aunque podríamos desempeñar esta tarea en Excel. Nada es más cómodo que
+utilizar una base de datos, y una opción para esto último es Microsoft Access.
+</p>
+<p>
+    Con Access, puedes crear una base de datos sin escribir código ni ser un experto
+en bases de datos.
+</p>
+
+<p>Microsoft Access (MS Access) es un sistema de gestión de bases de datos
+    relacional; esto significa que está preparado para almacenar múltiples tablas y crear
+    relaciones entre estas.</p>
+
+    <p>
+        MS Access es un programa desarrollado por Microsoft que permite crear bases de
+datos relacionales. La información se obtiene a través de tablas, las cuáles
+almacenan información sobre temas concretos. Las tablas disponen los datos en
+campos (columnas) y registros (filas).
+    </p>
+
+    <p>
+        Una base de datos en Access nos permite generar nueva información a partir de
+dichos datos y a través de diversos procesos, haciendo uso de campos y registros.
+    </p>
+
+    <p>
+        Recordemos que las tablas disponen los datos en campos y registros. Los campos
+son las columnas y los registros las filas.
+    </p>
+    
+    <p>
+        Las bases de datos de Access 2010 tienen la extensión .accdb o en versiones mas
+recientes la extensión .mdb para que el ordenador las reconozca como tal.
+    </p>
+
+    <p>
+        La diferencia mas grande entre Excel y Access es la forma en la que Access
+permite relaciones entre múltiples tablas
+    </p>
+
+    <p>
+        Access es una poderosa herramienta que sirve como gestor de datos, ademas de se
+puede conectar con Excel y todos los otros programas de Offi
+    </p>
+    <p>
+        Imagina contar con el conocimiento necesario para poder dominar esta poderosa
+herramienta y resolver fácilmente tareas en tu empresa, trabajo u hogar.
+    </p>
+</div>
+
+<div class="ejercicio-box">
+    <h1 class="number-title" > Tarea 1 </h1>  
+    <ol>
+        <li>
+            Dar tres ejemplos (especificando detalles) de distintas aplicaciones de bases de
+datos que sean de tu interés y preferentemente que pertenezcan a alguna rama
+del turismo.
+        </li>
+        <li>
+            Investigar las principales similitudes y diferencias entres MySQL y Microsoft
+Access.
+        </li>
+        <li>
+            Investigar y mencionar al menos dos SGDB distintos de MySQL y Microsoft
+Access.
+        </li>
+        <li>
+            Describe dos diferencias (distintas de las presentadas) entre Access y Excel.
+Sugerencia: Analiza las propiedades de las tablas en Access y en Excel
+respectivamente.
+        </li>
+    </ol>
+</div>
+
+
+
+  <div class="ejercicio-box"> 
+    <h1 class="number-title"> Ejercicio. Tabla Alumnos</h1>  
+    <p>Supongamos que se desea almacenar información sobre estudiantes en una universidad pequeña.
+     Se desea almacenar y administar  la información mas relevante  de los alumnos</p>
+    
+        
+     <button class="respButton hvr-grow ">   Construya una tabla en Access de nombre Alumnos con la siguiente estructura 
+    </button>
+<div class="resp-box flexbox">
+  <div class="flexbox">
+        <p>
+           
+            <ol>
+                <li>Matrícula </li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 10</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (sin duplicados)</li>
+                </ul>
+                <li>Nombre(s)</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 20</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                <li>Primer apellido.</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 25</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                <li>Segundo apellido.</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 10</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                <li>Fecha de nacimiento</li>
+                <ul>
+                    <li>Tipo de dato: Fecha/Hora</li>
+                    <li>Formato: Fecha corta </li>
+                    <li>Mascara de entrada: Aspecto 26/01/1990</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                <li>Genero</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 1</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                <li>CURP</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 18</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (sin duplicados)</li>
+                </ul>
+                <li>NSS</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 12</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (sin duplicados)</li>
+                </ul>
+                <li>Tipo de Sangre</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 4</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                <li>Calle</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 30</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                
+                <li>Número interior</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 4</li>
+                    <li>Requerido: No</li>
+                    <li>Indexado: No</li>
+                </ul>
+                <li>Número exterior</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 10</li>
+                    <li>Requerido: No</li>
+                    <li>Indexado: No</li>
+                </ul>
+                <li>Colonia</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 50</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                  <li>Municipio</li>
+                  <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 30</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                   <li>código postal</li>
+                   <ul>
+                    <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 10</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                <li>Estado</li>
+                <ul>
+                <li>Tipo de dato: Texto</li>
+                    <li>Tamaño de campo: 20</li>
+                    <li>Requerido: Si</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                <li>Carrera</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                        <li>Tamaño de campo: 30</li>
+                        <li>Requerido: Si</li>
+                        <li>Indexado: Si (con duplicados)</li>
+                    </ul>
+                <li>Tutor académico</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                        <li>Tamaño de campo: 60</li>
+                        <li>Requerido: Si</li>
+                        <li>Indexado: Si (con duplicados)</li>
+                    </ul>
+                <li>Alumno regular</li>
+                <ul>
+                    <li>Tipo de dato: Si/No</li>
+                    <li>Formato: Si/No</li>
+                        <li>Indexado: Si (con duplicados)</li>
+                    </ul>
+                <li>Creditos acumulados</li>
+                <ul>
+                    <li>Tipo de dato: Número</li>
+                        <li>Requerido: Si</li>
+                    </ul>
+                <li>Becas de Alimentos</li>
+                <ul>
+                    <li>Tipo de dato: Si/No</li>
+                    <li>Formato: Si/No</li>
+                    <li>Indexado: Si (con duplicados)</li>
+                </ul>
+                    </ul>
+                <li>Beca de  Colegiatura</li>
+                <ul>
+                    <li>Tipo de dato: Si/No</li>
+                    <li>Formato: Si/No</li>
+
+                        <li>Indexado: Si (con duplicados)</li>
+                    </ul>
+                </ul>
+
+                <li>Correo electrónico</li>
+                <ul>
+                    <li>Tipo de dato: Texto</li>
+                        <li>Tamaño de campo: 50</li>
+                        <li>Requerido: Si</li>
+                        <li>Indexado: Si (sin duplicados)</li>
+                    </ul>
+                <li>Numero celular</li>
+                <ul>
+                <li>Tipo de dato: Texto</li>
+                <li>Tamaño de campo: 10</li>
+                <li>Requerido: Si</li>
+                <li>Indexado: Si (sin duplicados)</li>
+            </ul>
+            
+                
+                
+                
+            </ol>
+        </p>
+
+
+
+  </div>
+</div>
+    </div>
+
+
+    
+
+      
+      </div> -->
+
+    </div>
+
+</body>

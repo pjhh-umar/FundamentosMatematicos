@@ -1,0 +1,3407 @@
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="../main.js"></script>
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1]
+          },
+          tags: "ams" /* this part is for numbered equations */
+        }
+      };
+    </script>
+
+    
+    <!-- This part is for using single $ for latex input, instead of \(\) -->
+    <script>
+        MathJax = {
+        tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            },
+        svg: {
+            fontCache: 'global'
+        }
+    };
+    </script>
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+    .lista
+        {
+            counter-reset: listaCounter 0 sublistaCounter 1 subsublistaCounter 1 subsubsublistaCounter 1;
+        }
+        /* .sublista{
+            counter-reset: sublistaCounter 1  SubsublistaCounter;
+        } */
+        </style>
+
+    <style>
+            /* body.number-title
+            {
+            counter-reset: temaCounter 1 subsectioncounter ;
+            } */
+            body.fondo-body{
+              counter-reset: temaCounter 15 sectionCounter;
+            }
+
+            /* h1.page-number-title
+            {
+            counter-reset: sectionCounter 0;
+            }  */
+
+            h1.tema-number-title
+                {
+                counter-reset: sectionCounter 0;
+                } 
+
+            h1.number-title
+            {
+            counter-reset: subsectionCounter;
+            /* counter-reset: subsectionCounter; */
+            }
+
+    </style>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="../style.css" />
+    <!-- Top Menu  -->
+    
+          
+        <header class="main-header">
+        
+          <div class="logo_superior_umar">
+          <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+          </div>
+          <div class="contenedor_titulo">
+          <div class="title">Tecnologías de la Información y Comunicación II</div>
+          <div class="subtitle">Licenciatura en Administración Turística</div>
+          <div class="subsubtitle">Universidad del Mar, campus Huatulco </div>
+          <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+          </div>
+
+      
+        </header>
+
+    <nav class="top-nav">
+        <ul>
+        <li> <a href="https://pjhh-umar.github.io/TICDOS/Home.html"> Inicio  </a> </li>
+        <li> <a href="https://pjhh-umar.github.io/TICDOS/Informacion_General.html"> Información</a> </li>
+        <li> <a href="https://pjhh-umar.github.io/TICDOS/Notas.html"> Notas  </a> </li>
+        <!-- <li> <a href="https://pjhh-umar.github.io/TICDOS/Quizes.html"> Quizes  </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/TICDOS/Practicas.html">Prácticas</a></li> -->
+            <li> <a href="https://pjhh-umar.github.io/TICDOS/Examenes.html"> Archivos  </a> </li>
+<li> <a href="https://pjhh-umar.github.io/TICDOS/Links.html"> Links</a> </li>
+        </ul>
+    </nav>
+    
+    
+    <title> Semana 14  </title>
+    
+    </head>
+
+    <body class="fondo-body" >
+    
+    <div class="nota-box"> <h1 class="page-number-title"> Semana 14</h1> 
+
+    
+    <h1 class="tema-number-title"> Microsoft Access</h1>  
+
+      <p>Hoy en día muchas de las actividades que se desempeñan en una empresa requieren un
+        seguimiento especial. Algunas de esas tareas son:
+      <ul>
+        <li>Administrar un inventario,</li>
+        <li>Seguimiento de pedidos realizados por los clientes,</li>
+        <li>Control de ingresos y gastos,</li>
+        </li>
+      </ul>
+      </p>
+
+      <p>Aunque podríamos desempeñar esta tarea en Excel. Nada es más cómodo que utilizar una base de datos,
+        y una opción para esto último es <i>Microsoft Access</i>.
+      </p>
+      <p><b>Microsoft Access (MS Access) es un Sistema  Gestor de Bases de Datos
+          Relacional</b> desarrollado por Microsoft para crear bases de
+          datos relacionales; esto significa que está preparado para almacenar múltiples tablas y establecer
+          relaciones entre estas. La información se obtiene a través de tablas, las cuáles
+      almacenan información sobre entidades o temas en concreto. Las tablas disponen los datos en
+      campos (columnas) y registros (filas). La diferencia mas grande entre Excel y Access es la forma en la que Access
+      permite crear relaciones entre múltiples tablas. 
+          </p>
+
+          <p>Con Access, puedes crear una base de datos
+            sin escribir código ni ser un experto en bases de datos.
+          Una base de datos en Access nos permite generar nueva información a partir de
+      dichos datos y a través de diversos procesos, haciendo uso de campos y registros. 
+        Las bases de datos de Access 2010 tienen la extensión .accdb o en versiones mas
+      recientes la extensión .mdb para que el ordenador las reconozca como tal.
+     
+          </p>
+
+          <p>Access es una poderosa herramienta que sirve como gestor de datos, ademas de que se
+      puede conectar con Excel y todos los otros programas de Officce.
+          </p>
+          <!-- <p>
+              Imagina contar con el conocimiento necesario para poder dominar esta poderosa
+      herramienta y resolver fácilmente tareas en tu empresa, trabajo u hogar.
+          </p> -->
+
+
+      <h1 class="number-title"> Tipos de datos en Access</h1>
+          <p>
+              Cuando se diseña y crea una base de datos, tenemos que planificar una o más tablas 
+              así como los campos (columnas) para cada tabla (recordemos que todas las tablas 
+              de Access se componen de campos), y ademas es necesario  elegir un tipo de
+              datos para cada campo.
+          </p>
+
+          <p>
+              El <b>tipo de datos de un campo</b> es la propiedad más importante porque determina qué tipo de
+              datos puede almacenar el campo, como puede ser una gran cantidad de texto o archivos adjuntos.
+             
+          </p>
+          
+              
+          <h3 class="title">Ejemplo</h3>
+          <p>
+            <ul>
+              <li>Si necesitas almacenar fechas y horas, establece un campo cuyo tipo  de dato sea
+              Fecha y Hora.</li>
+              <li> Si necesitas almacenar nombres o  direcciones, establezca un
+              campo cuyo tipo de dato sea Texto.</li>
+          </p>
+          </ul>
+
+          <p> Access ofrece muchos tipos de datos diferentes y cada tipo tiene una finalidad concreta. </p>
+    
+          <h3 class="title">Observación</h3>
+          <p>
+              Los tipos de datos proporcionan una forma básica de <b>validación de datos</b> porque
+              ayudan a garantizar que los usuarios escriben los tipos de datos adecuados en los campos
+              de tabla. Por ejemplo, no se puede escribir texto en un campo configurado para aceptar 
+              solo números.
+          </p>
+      
+          <p>
+          El tipo de datos Texto  permite escribir/almacenar casi cualquier carácter (letra, símbolo o número).
+          Pero un campo cuyo tipo de datos es número solo puede almacenar datos numéricos.
+          Sin embargo, una cuidada selección de tipos de datos puede ayudarle a aprovecharse de 
+          características adicionales de Access (como la validación de datos y las funciones) y a 
+          mejorar la precisión de la información que está almacenando.
+          </p>
+        <center>
+          <button class="respButton">  Tipos de datos en Access </button>
+          <div class="resp-box flexbox">
+          <div class="flexbox">   
+              <!-- <h3>Tipos de datos en Access </h3> -->
+               <p>
+                  <table class="tabla-funciones">
+                  <thead>
+                      <tr>
+                        <th>Tipo de datos</th>
+                        <th>Uso</th>
+                        <th>Tamaño</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      
+                      <tr>
+                          <td class="nombre-funcion">Texto corto</td>
+                        <td  >Datos alfanuméricos cortos como nombres, apellidos, títulos,  
+                            una dirección, etc.
+                            <p>En general se utiliza para introducir datos que incluyan
+                            texto y/o valores numéricos que no requieran cálculos matemáticos.</p>
+                          <!-- <p> Nota: Desde Access 2013, se ha cambiado el nombre del tipo de datos Texto por Texto corto.</p> -->
+      
+                            </td>
+                        <td>Hasta 255 caracteres.</td>
+                      </tr>
+                    
+                      <tr>
+                          <td class="nombre-funcion">Texto largo</td>
+                        <td><p>Grandes cantidades de datos alfanuméricos: oraciones y párrafos.
+
+                        </p>
+                          <p>Un uso típico de un campo Texto Largo sería  una descripción detallada de
+                            un producto.
+                          </p>
+                          <!-- <p>Nota: Desde Access 2013, se ha cambiado el nombre de los tipos de datos Memo por Texto largo.</p> -->
+                        </td>
+                        <td>Hasta 1 gigabyte (GB) aproximadamente, pero los controles para mostrar un texto
+                           largo se limitan a los primeros 64 000 caracteres.</td>
+                      </tr>
+                    
+                      
+                      <tr>
+                          <td class="nombre-funcion">Número</td>
+                          <td>Datos numéricos que vayan a ser utilizados para realizar cálculos matemáticos. 
+                            <p> Nota: Hay un tipo de datos independiente para moneda. </p>
+                            </td>
+                          <td>1, 2, 4, 8 o 16 bytes.</td>
+                        </tr>
+          
+                        
+                      <tr>
+                          <td class="nombre-funcion">Fecha y hora</td>
+                          <td>Se utiliza este tipo de dato para introducir datos de fechas y horas.
+      
+                              <p>Nota: Se recomienda utilizar en formato (propiedades del campo) la fecha corta. 
+                                  Y  una mascara de entrada (propiedades del campo).</p>
+                          </td>
+                          <td>8 bytes.</td>
+                        </tr>
+          
+                        
+                      <tr>
+                          <td class="nombre-funcion">Moneda</td>
+                          <td>Ideal para almacenar datos numéricos que representen valores monetarios, 
+                              que vayan a utilizarse para cálculos matemáticos 
+                              y que necesitemos que lo preceda el signo de moneda. 
+                              
+                              <p>Nota: Acepta hasta 15 dígitos para la parte entera del número y hasta 4 
+                                dígitos en su parte decimal. </p>
+                          </td>
+                          <td>8 bytes</td>
+                        </tr>
+          
+                        <tr>
+                          <td class="nombre-funcion">Autonumeración</td>
+                            <td>Valor único generado por Access para cada registro nuevo. 
+                                El valor que contenga este campo se va a ir incrementando
+                                cada vez que se agregue un registro a la tabla, este tipo de datos es utilizado para llevar una secuencia 
+                                de los registros ingresados a una tabla. </td>
+                            <td>4 bytes (16 bytes para el Id. de replicación).</td>
+                        </tr>
+          
+          
+                        <tr>
+                          <td class="nombre-funcion">Si/No</td>
+                          <td>Util para almacena  datos booleanos (Verdadero/Falso); 
+                              Access almacena el valor numérico cero (0) para Falso 
+                              y -1 para Verdadero. Los valores y los campos Sí y No
+                              solo pueden contener uno de los dos valores.</td>
+                          <td>1 byte.</td>
+                      </tr>
+          
+          
+                      <tr>
+                          <td class="nombre-funcion">Objeto OLE</td>
+                          <td> Este tipo de datos es usado para enlazar o adjuntar archivos 
+                              creados en otros programas, como pueden ser archivos word, excel, etc.
+                              Solo admite un único archivo y el archivo ocupa espacio en la base de datos.</td>
+                          <td>Hasta unos 2 GB.</td>
+                      </tr>
+          
+                      <tr>
+                          <td class="nombre-funcion">Hipervínculo</td>
+                          <td>Es usado para campos que contienen enlaces a páginas web, direcciones de correo, o archivos que abren con un navegador web. </td>
+                          <td>Hasta 8192 (cada parte de un tipo de datos Hipervínculo 
+                              puede contener un máximo de 2048 caracteres).</td>
+                      </tr>
+          
+                      <tr>
+                          <td class="nombre-funcion">Datos adjuntos</td>
+                          <td>
+                              <p> Se usa en un campo que permita adjuntar archivos o imágenes a un registro. 
+                                  Por ejemplo, si tiene una base de datos de contactos de trabajo, puede usar 
+                                  un campo de datos adjuntos para adjuntar una foto del contacto, 
+                                  o adjuntar documentos como un currículo.
+                              </p>
+                              
+                              <p>A diferencia del tipo Objeto OLE, cada documento, gráfico, hoja de cálculo, etc 
+                              que se adjunte a un campo de este tipo se ejecutará en el programa que fue creado, 
+                              sin requerir más espacio adicional en la base de datos del que necesita el solo enlace. 
+                              Admite varios archivos. 
+                          </p>
+                              <p>El tipo de datos Datos adjuntos no está disponible 
+                              en los formatos de archivo MDB.
+                              </p>
+                      </td>
+                          <td>Hasta unos 2 GB.</td>
+                      </tr>
+          
+                      <tr>
+                          <td class="nombre-funcion">Calculado</td>
+                          <td>Este tipo de datos usa datos de  la misma tabla para hacer cálculos. Practicamente puede ser de
+                              cualquiera de los formatos indicados anteriormente, ya que el cálculo puede ser tanto sobre
+                              fechas, como sobre valores monetarios u operaciones lógicas de verdadero/falso.
+                              
+                              <p>Nota: Los campos calculados aparecieron por primera vez en Access 2010.</p>
+                          </td>
+                          <td>Depende del tipo de datos de la propiedad Tipo de resultado.
+                              El resultado de tipo de datos de texto corto puede tener hasta 243 caracteres.
+                              Texto largo, número, Sí/No y la fecha y hora debe coincidir con sus
+                              respectivos tipos de datos.</td>
+                      </tr>
+          
+                      <tr>
+                          <td class="nombre-funcion">Asistente para búsquedas</td>
+                          <td>La entrada del Asistente para búsquedas en la columna de tipo de datos en la vista
+                              Diseño no es realmente un tipo de datos, el cual usa datos en la misma tabla para hacer cálculos.
+                      
+                          </td>
+          
+                          <td>Depende del tipo de datos del campo de búsqueda.</td>
+                      </tr>
+                  </tbody>
+                    
+                  </table>
+               </p>
+          </div>
+          </div>
+        </center>
+       
+        <p>Una vez elegido el tipo de datos adecuado a la informacion 
+          que almacenaremos en dicho campo. Las <b>propiedades de un campo</b>  describen las 
+          características y el comportamiento de los datos agregados a dicho campo. 
+        </p>
+
+        <h1 class="number-title"> Propiedades de campo en  Access</h1>
+      <p>
+       Después de crear un campo y establecer su tipo de datos, se pueden establecer otras propiedades del campo,
+       las cuales determinan cualidades importantes del mismo, tales como:
+      <ol>
+        <li>Los formatos que se pueden usar con el campo.</li>
+        <li>El tamaño máximo de un valor del campo.</li>
+        <li>Cómo se puede usar el campo en expresiones.</li>
+        <li>Si el campo se puede indizar.</li>
+      </ol>
+
+
+       <!-- Por ejemplo, se puede controlar el tamaño de un campo de texto estableciendo su propiedad 
+       Tamaño del campo, entre otras muchas propiedades. -->
+      </p>
+  
+      <p>Enseguida se describen  algunas  propiedades de campo y su uso para  distintos tipos de datos:  </p>
+  
+      <center>
+        <button class="respButton ">   Propiedades de campo en Access  </button>
+          <div class="resp-box flexbox">
+            <p>
+              <div class="flexbox">   
+                <!-- <h3>Propiedades comunes en algunos tipos de datos</h3> -->
+                <table class="tabla-funciones">
+                  <thead>    
+                      <tr>
+                        <th> Propiedad</th>
+                        <th> Uso </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="nombre-funcion"> Formato</td>
+                        <td>Determina la forma en que aparece el campo cuando se visualiza o imprime en hojas de datos o en formularios 
+                            o informes enlazados al campo. 
+                            <!-- Se puede definir un formato personalizado para un campo de hipervínculo. -->
+                        </td>
+                    </tr>
+            
+                      <tr>
+                        <td class="nombre-funcion">Si/No</td>
+                        <td>Opciones de Sí o No. </td>
+                      </tr>
+                  
+                      <tr>
+                        <td class="nombre-funcion">Titulo</td>
+                        <td> Se utiliza esta propiedad para indicar cómo queremos que se visualice la cabecera del campo.
+                            Por ejemplo, si un campo se llama Fecha_nac e indicamos Fecha de nacimiento como valor 
+                            en la propiedad Título, en la cabecera del campo Fecha_nac veremos Fecha de nacimiento.
+                            <p>Es tambien el texto de etiqueta que se muestra para este campo de forma predeterminada en formularios,
+                            informes y consultas. Si esta propiedad está vacía, se usa como valor predeterminado 
+                            el nombre del campo. Se permite cualquier cadena de texto. Un título eficaz suele ser breve.
+                          </p>
+                        </td>
+                      </tr>
+                  
+                      <tr>
+                        <td class="nombre-funcion">Valor predeterminado</td>
+                        <td>El valor predeterminado es el valor que se almacenará automáticamente en el campo si no introducimos 
+                            ningún valor. Se suele emplear cuando se sabe que un determinado campo va a tener la mayoría de las
+                            veces el mismo valor, se utiliza esta propiedad para indicar o especificar cuál va a ser ese valor 
+                            y así que se introduzca automáticamente en el campo a la hora de introducir los datos de la tabla.
+                        </td>
+                      </tr>
+                  
+                      <tr>
+                          <td class="nombre-funcion">Regla de validación</td>
+                          <td>Proporciona una expresión que debe ser verdadera al agregar o cambiar el valor en este campo. 
+                              Se usa junto con la propiedad Texto de validación. Esta propiedad nos permite controlar 
+                              la entrada de datos según el criterio que se especifique.
+                        </td>
+                      </tr>
+            
+                      <tr>
+                          <td class="nombre-funcion">Texto de validación</td>
+                          <td>Escribir un mensaje que aparezca cuando un valor especificado infrinja la expresión en la propiedad Regla de validación.</td>
+                      </tr>
+                    
+            
+                      <tr>
+                        <td class="nombre-funcion">Requerido</td>
+                        <td>Requiere que los datos se introduzcan en un campo.</td>
+                    </tr>
+            
+                      <tr>
+                        <td class="nombre-funcion">Permitir longitud cero</td>
+                        <td>Permite escribir (al establecerla en Sí) una cadena de longitud cero ("") en un campo Hipervínculo, Texto o Memo.</td>
+                      </tr>
+            
+                      <tr>
+                          <td class="nombre-funcion">Indexado</td>
+                      <td>
+                          <p>Especifica si el campo tiene un índice. Hay tres valores disponibles:</p>
+                          <ol>
+                              <li>Sí (sin duplicados)   Crea un índice exclusivo en el campo.</li>
+                              <li>Sí (con duplicados)   Crea un índice no exclusivo en el campo. </li>
+                              <li>No, quita cualquier índice del campo. </li>
+                            
+                          </ol>
+                        <p>Nota: No cambies esta propiedad en un campo que se use como clave principal.</p>
+                    </td>
+                      </tr>
+            <tr>
+                          <!-- <td class="nombre-funcion">Compresión Unicode</td>
+                <td>Comprime el texto que se almacena en este campo cuando se almacenan menos de 4.096 caracteres.</td>
+            </tr>
+            
+                      <tr>
+                        <td class="nombre-funcion">Modo IME</td>
+                        <td>Controla la conversión de caracteres en las versiones asiáticas de Windows.</td>
+                      </tr> -->
+                    
+                    
+            
+                      <tr>
+                          <td class="nombre-funcion">Alinear texto</td>
+                          <td>Especifica la alineación de texto predeterminada dentro de un control.</td>
+                      </tr>
+                  
+                    </tbody>    
+                  </table>
+              </div>
+            </p>
+          </div>
+        
+      </center>
+      
+  
+      <h2 class="number-title">Requerido y Permitir longitud cero</h2>
+  
+      Cuando creamos nuevas tablas en Access, es mucho mas fácil  realizarlo a través de la vista diseño de la tabla.
+      Para modificar y/o agregar información también podemos acceder a dicha vista.
+      <ul>
+         <li><p><h3 class="title">Requerido:</h3> La propiedad Requerido indica que ese campo no se puede dejar en blanco, sin datos. </p></li> 
+         <li><p><h3 class="title"> Longitud cero:</h3> Permitir longitud cero admite dos posibles valores, 
+          Sí y No. Si está con valor Sí significa que podemos introducir una cadena de longitud cero en el
+          campo. Esta cadena se puede puede representar como "" sin nada dentro de las comillas. 
+          Con el valor No no se admitiría esta cadena.
+          </p>
+        </li>
+      </ul>
+
+      <h3 class="title">Observación.</h3>
+      <p>
+        Todos los campos pertenecientes a la clave principal de una tabla tienen la obligación de
+        poseer datos, no pueden estar vacíos. El resto de campos no tienen, en principio, porque
+        ser requerido. Pero si la propiedad Requerido de un campo está a Sí, significa que no podemos 
+        dejar de introducir datos en ese campo. Necesariamente introduciremos información para cumplir
+        con la exigencia de esta propiedad.
+      </p>
+      
+      <p>Sin embargo, puede ocurrir que, en ciertas ocasiones, no tenemos el dato para ese campo y 
+          resulta que con Requerido activado, Access nos obliga a introducir información en el mismo.
+           ¿Qué podemos hacer? Si la propiedad permitir longitud cero está activada (valor Sí), que hacemos es pulsar la barra espaciadora, y de esta forma podemos pasar a otro campo sin problemas. Más tarde, con la información en nuestras manos, introducimos el dato sin problemas.
+      </p>
+      
+      <p><h3 class="title">Observación.</h3> Con permitir longitud cero y requerido a sí podemos dejar la introducción de datos para más tarde. Si tuviésemos requerido a si y permitir longitud cero a no, entonces Access no permite introducir una cadena de longitud cero en el campo,
+           y estaremos obligados a introducir información, dar a la barra espaciadora no se permite.
+      </b>
+      
+      <h2 class="number-title"> Formato </h2>
+      <p> 
+      Entre las propiedades de campo, una de las más importantes es formato.
+      Esta propiedad se utiliza para personalizar la forma de presentar los datos en pantalla o en un informe. 
+      Enseguida se presentan los propiedades de campo para algunos de los tipos de dato usados mas
+      frecuentemente durante el diseño de una base de datos:
+      </p>
+      
+      <p>
+        <center>
+          <button class="respButton hvr-grow ">  Número </button>
+            <div class="resp-box flexbox">
+              <p>
+                <div class="flexbox">      
+              <!-- <h3>Número</h3> -->
+                  <table class="tabla-funciones">
+                      <thead>
+                        <tr>
+                        <th> Formato</th>
+                        <th> Se usa para mostrar</th>
+                        </tr>
+                      </thead>
+                    
+                      <tbody>
+                        <tr>
+                          <td class="nombre-funcion">General</td>
+                          <td>Números sin formato adicional exactamente como se almacenan.</td>
+                        </tr>
+                    
+                        <tr>
+                          <td class="nombre-funcion">Moneda</td>
+                          <td>Valores monetarios generales. </td>
+                        </tr>
+                    
+                        <tr>
+                          <td class="nombre-funcion">Euro</td>
+                          <td>Valores monetarios generales almacenados en el formato de la UE.
+                          </td>
+                    
+                        </tr>
+                    
+                        <tr>
+                          <td class="nombre-funcion">Estandar    </td>
+                          <td>Datos numéricos con decimales.</td>
+                    
+                        </tr>
+                    
+                        <tr>
+                          <td class="nombre-funcion">Porcentaje</td>
+                          <td>Porcentajes.</td>
+                        </tr>
+              
+                        <tr>
+                          <td class="nombre-funcion">Científico</td>
+                          <td>Cálculos.</td>
+                        </tr>
+                  </table>
+                </div>
+              </p>
+              </div>
+        </center>
+      </p>
+
+      <p>
+        <center>
+          <button class="respButton hvr-grow ">Fecha y hora </button>
+            <div class="resp-box flexbox">
+              <p>
+                <div class="flexbox">   
+                      <!-- <h3>Fecha y hora</h3> -->
+                      <table class="tabla-funciones">
+                          <thead>        
+                            <tr>
+                            <th> Formato</th>
+                            <th> Se usa para mostrar</th>
+                            </tr>
+                          </thead>
+                        
+                          <tbody>
+                            <tr>
+                              <td class="nombre-funcion">Fecha corta</td>
+                              <td>Mostrar la fecha en un formato corto. Por ejemplo, 26/04/2022</td>
+                            </tr>
+                        
+                            <tr>
+                              <td class="nombre-funcion">Fecha Mediana</td>
+                              <td>Mostrar la fecha en un formato mediano. Por ejemplo, 3-Abr-09 </td>
+                            </tr>
+                        
+                            <tr>
+                              <td class="nombre-funcion">Fecha larga</td>
+                              <td>Mostrar la fecha en un formato largo. Por ejemplo, Miércoles 14 de marzo.
+                              </td>
+                            </tr>
+                        
+                            <tr>
+                              <td class="nombre-funcion">Hora a.m. o p.m.</td>
+                              <td>Mostrar la hora solo con un formato de 12 horas que responderá a 
+                                  los cambios en la configuración regional de fecha y hora.</td>
+                            </tr>
+                        
+                            <tr>
+                              <td class="nombre-funcion">Hora mediana</td>
+                              <td>Mostrar la hora seguida A.M. o P.M.</td>
+                            </tr>
+                  
+              
+                            <tr>
+                              <td class="nombre-funcion">Hora de 24 horas</td>
+                              <td>Mostrar la hora solo con un formato de 24 horas que responderá a los cambios
+                                  en la configuración regional de fecha y hora.</td>
+                            </tr>
+                          </tbody>
+                      </table>
+                </div>
+              </p>
+            </div>
+          </center>
+      </p>
+
+      <p>
+        <center>
+          <button class="respButton hvr-grow ">  Si/No </button>
+          <div class="resp-box flexbox">
+            <p>
+              <div class="flexbox">   
+                <!-- <h3>Si/No</h3> -->
+                <table class="tabla-funciones">
+            
+                    <thead>    
+                    <tr>
+                        <th> Formato</th>
+                        <th> Se usa para mostrar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                              <td class="nombre-funcion">Casilla</td>
+                        <td>Introducción a los tipos de datos y las propiedades de los campos</td>
+                      </tr>
+                  
+                      <tr>
+                              <td class="nombre-funcion">Si/No</td>
+                        <td>Opciones de Sí o No. </td>
+                      </tr>
+                  
+                      <tr>
+                              <td class="nombre-funcion">Verdader/Falso</td>
+                        <td>Opciones de Verdadero o Falso.
+                        </td>
+                      </tr>
+                  
+                      <tr>
+                              <td class="nombre-funcion">Activar/Desactivar</td>
+                        <td>Opciones de Activar o Desactivar</td>
+                      </tr>
+                  
+                      <tr>
+                              <td class="nombre-funcion">Porcentaje</td>
+                        <td>Porcentajes.</td>
+                      </tr>
+            
+                      <tr>
+                          <td class="nombre-funcion">Científico</td>
+                      <td>Cálculos.</td>
+                      </tr>
+                  
+                    </tbody>    
+                  </table>
+                
+              </div>
+            </p>
+          </div>
+        </center>
+      </p>
+   
+  
+  
+  <h2 class="number-title">Mascara de entrada </h2> 
+   
+  <p>Una máscara de entrada es una cadena de caracteres que define el formato de los valores de entrada válidos, 
+    formada por caracteres literales (como espacios, puntos, guiones y paréntesis) que separan los espacios en 
+    blanco para rellenar. 
+  </p>
+  <p>
+    <!-- La configuración de la
+    propiedad Máscara de entrada (InputMask) está formada por caracteres literales
+    junto con caracteres especiales que determinan el tipo de valor que puede introducirse
+    en un espacio en blanco en esa posición.  
+    Las máscaras de entrada se almacenan como una propiedad de objeto. 
+    --> 
+    
+    Las máscaras de entrada son de utilidad cuando es importante que el formato de los valores de entrada sea uniforme.
+    Por ejemplo, se puede usar una máscara de entrada con un campo donde se almacenan números de teléfono, 
+    de modo que Access obligue a que se escriban diez dígitos. Si alguien escribe un número de teléfono sin el código de 
+    área, Access no registrará los datos hasta que dicho código se incluya. O bien, una máscara de entrada permite obligar 
+    a los usuarios a escribir las fechas en un formato como 14/04/2007. De esta manera, ase puede usar una máscara de entrada para 
+    validar los datos, lo que obliga a los usuarios a escribir los valores de una manera específica.
+  </p>
+  
+  
+  <h3 class="title">Observaciones</h3>
+  <p>
+    <ol>
+      <li>Una buena practica es configurar  máscaras de entrada
+        para los campos que contienen datos cuyo formato siempre es el mismo,  
+        permite que los usuarios escriban datos correctamente en la base de datos de Access.</li><br>
+      <li>Una máscara de entrada solo determina si Access acepta los datos o no; es decir, 
+        no altera la manera en  la que los datos se almacenan, que se controla mediante el tipo de datos del campo
+        y otras propiedades.
+      </li>
+
+    </ol>
+  </p>
+  
+  <p>
+      Las máscaras de entrada se utilizan principalmente en campos de Texto y de Fecha/Hora,
+      pero también pueden utilizarse en campos Numéricos o de Moneda. Por ejemplo, podemos usar 
+      una máscara de entrada para asegurarnos que los números de teléfono introducidos en un campo
+      de número de teléfono van a tener el formato adecuado.
+  </p>
+  
+  <h3 class="title"> Composición de las mascaras de entrada</h3>
+      <p>
+   Las máscaras de entrada están compuestas de una sección obligatoria y dos secciones opcionales,  
+    cada una de ellas se separa con punto y coma. El propósito de cada sección es el siguiente:
+     </p>
+   
+       <ul>
+           <li><h5 class="title"> La primera sección es obligatoria.</h5> Incluye los caracteres o la cadena de caracteres 
+               que especifican propiamente a la mascara de entrada junto con marcadores de posición tales como 
+                como paréntesis, puntos y guiones. Para ver una lista de los caracteres que puedes utilizar 
+                para definir la máscara de entrada, mira la tabla que aparece a continuación.
+           </li><br>
+  
+           <li>
+               <h5 class="title">La segunda sección</h5> es opcional y hace referencia a los caracteres de máscara insertados y
+                al modo en que se almacenan dentro del campo, esto es, en esta seccion se especifica
+                si Access almacena los caracteres de visualización literales en la tabla al introducir datos.
+                <b>Si utilizas 0</b> para esta sección, todos los caracteres de visualización literales (por ejemplo, 
+                el paréntesis de una máscara de entrada de un número de teléfono) se almacenan con el valor; 
+                <b>si introduces 1</b> o dejas esta sección en blanco, sólo se almacenan los caracteres introducidos.
+           </li><br>
+  
+           <li>
+               <h5 class="title">La tercera sección</h5> también es opcional e indica un solo carácter o espacio que se usa como marcador de posición. 
+               De forma predeterminada, Access usa el carácter de subrayado (_). Si desea usar otro carácter, escríbalo en la 
+               tercera sección de la máscara. En otras palabras, en esta sección <b>se especifica el carácter que Access 
+                muestra para el espacio en el que el usuario debe escribir un carácter en la máscara de entrada</b>.
+               Para esta sección puedes utilizar casi cualquier  carácter; para mostrar una cadena en blanco, utiliza 
+               un espacio entre comillas (" ").
+           </li>
+       </ul>
+   
+     
+            <p>En la siguiente lista, se enumeran los caracteres literales y marcadores de posición de una máscara de entrada
+            y se explica cómo esta controla la entrada de datos:
+            </p>
+            <center>
+              <button class="respButton hvr-grow ">Caracteres que definen máscaras de entrada</button>
+                <div class="resp-box flexbox">
+                  <p>
+                    <div class="flexbox">   
+                      <table class="tabla-funciones">
+                      <thead>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>
+                              <b >Carácter</b>
+                            </p>
+                          </td>
+                          <td>
+                            <p>
+                              <b >Explicación</b>
+                            </p>
+                          </td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>0</p>
+                          </td>
+                          <td>
+                            <p>El usuario debe escribir un dígito (0 a 9).</p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>9</p>
+                          </td>
+                          <td>
+                            <p>El usuario puede escribir un dígito (0 a 9).</p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>#</p>
+                          </td>
+                          <td>
+                            <p>El usuario puede escribir un dígito, espacio, signo más o menos. Si se omite, Access escribe un espacio en blanco.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>L</p>
+                          </td>
+                          <td>
+                            <p>El usuario debe escribir una letra.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>?</p>
+                          </td>
+                          <td>
+                            <p>El usuario puede escribir una letra.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>A</p>
+                          </td>
+                          <td>
+                            <p>El usuario debe escribir una letra o un dígito.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>a</p>
+                          </td>
+                          <td>
+                            <p>El usuario puede escribir una letra o un dígito.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>&amp;</p>
+                          </td>
+                          <td>
+                            <p>El usuario debe escribir un carácter o un espacio.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>C</p>
+                          </td>
+                          <td>
+                            <p>El usuario puede escribir caracteres o espacios. </p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>. , : ; - /</p>
+                          </td>
+                          <td>
+                            <p>Marcadores de posición de decimales y millares, separadores de fecha y hora. El carácter que seleccione dependerá de la configuración regional de Microsoft Windows. </p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>&gt;</p>
+                          </td>
+                          <td>
+                            <p>Convierte todos los caracteres que le siguen a mayúscula.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>&lt;</p>
+                          </td>
+                          <td>
+                            <p>Convierte todos los caracteres que le siguen a minúscula.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>!</p>
+                          </td>
+                          <td>
+                            <p>Hace que la máscara de entrada se rellene de izquierda a derecha y no de derecha a izquierda.</p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>\</p>
+                          </td>
+                          <td>
+                            <p>Los caracteres que le siguen inmediatamente se mostrarán literalmente. </p>
+                          </td>
+                        </tr>
+                        <tr>
+                              <td class="nombre-funcion">
+                            <p>""</p>
+                          </td>
+                          <td>
+                            <p>Los caracteres que están entre comillas dobles se mostrarán literalmente.</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                      </table>
+                
+                    </div>
+                  </p>
+                </div>
+            </center>
+
+            <p>
+              Microsoft Access interpreta los caracteres de la primera sección de la definición de la
+              propiedad Máscara de entrada (InputMask) tal como se muestra en la tabla siguiente.
+              Para definir un carácter literal deberá introducirse cualquier otro carácter no incluido en
+              la tabla, incluidos espacios y símbolos. Para definir uno de los siguientes caracteres
+              </p>
+                     
+              <h3 class="title"> Ejemplos </h3>
+                
+                <!-- <b>Describe algunos ejemplos de datos que podrias almacenar bajo las siguientes mascaras de entrada:</b> -->
+                <p>
+                    <ol>
+                        <li>
+                            La siguiente máscara de entrada para números de teléfono: (999) 000-0000;0;-:
+                        </li><br>
+                    <ul>
+                        <li>La máscara usa dos caracteres de marcador de posición: 9 y 0. El 9 indica un dígito opcional
+                            (que hace que sea opcional escribir el código de área) y el 0 indica un dígito obligatorio.
+                        </li><br>
+                        <li>
+                            El 0 de la segunda sección de la máscara de entrada indica que los caracteres 
+                            de máscara se almacenarán con los datos.
+                        </li><br>
+                        <li>
+                            La tercera sección de la máscara de entrada especifica que se debe usar un guión
+                              (-) en vez del carácter de subrayado (_) como carácter de marcador de posición.
+                        </li><br>
+                    </ul>
+                    <li>L0000 </li><br>
+                    <li>0 </li><br>
+                    <li>#0 </li><br>
+                    <li>000 </li><br>
+                    <li>L0L0</li><br>
+                    <li>>L0L 0L0</li><br>
+                    <li>00000-9999</li><br>
+                    <li>ISBN 0-&&&&&&&&-0</li>
+                </ol>
+                </p>
+                
+                <h2 class="number-title">Reglas de validación</h2>
+
+
+                <p>Access ofrece varias formas de restringir la entrada de datos:</p>
+                
+                <p><h5 class="title">Tipos de datos:</h5> Todos los campos de una tabla tienen un tipo de datos que restringe lo que pueden escribir
+                   los usuarios. Por ejemplo, un campo de fecha y hora sólo acepta valores de fecha y hora, 
+                   un campo de moneda solo acepta datos de moneda, etc.Los tipos de datos no son opcionales 
+                   y reportan la validación de tipo de datos más básica. 
+                </p>
+                <p><h5 class="title">Propiedades de campo:</h5> Algunas propiedades de campo restringen 
+                    la entrada de datos.
+                    <ul>
+                      <li><b>Tamaño de campo:</b> La propiedad Tamaño del campo restringe
+                      la entrada al limitar la cantidad de caracteres a recibir.
+                      </li><br>
+                    
+                      <li><b>Mascara de entrada:</b> La propiedad de campo Mascara de entrada 
+                        se puede usar también para validar los datos, lo que obliga a los usuarios a escribir
+                        los valores de una manera específica. Por ejemplo, una máscara de entrada permite 
+                        obligar a los usuarios a escribir las fechas en un formato como 14/04/2007.
+                      </li><br>
+
+                      <li><b>Regla de validación:</b> Las reglas de validacion permiten 
+                      establecer las condiciones que deben cumplir los datos para ser aceptados o no en un campo. 
+                      Esto es, puede prohibir o validar datos mediante reglas de validación al escribirlos en 
+                      bases de datos de Access. Puede usar el generador de expresiones para ayudarle 
+                      a dar formato a la regla correctamente. Las regllas de validacion se usan conjuntamente con 
+                      la propiedad <b>texto de validación</b> para informar de errores a los usuarios.
+                      </li>
+                    </ul>
+                </p>
+                <p><h3 class="title">Observación.</h3> Cuando se escriben datos, Access comprueba si se ha infringido alguna regla de validación y, si así es,
+                   los datos escritos no se aceptan y Access muestra un <b>mensaje de validacion</b>.
+                </p>
+ 
+            
+                <p>
+                  Estos métodos de validación de datos se pueden usar de forma aislada o combinados entre sí. En Access puede
+                  establecer reglas de validación en la vista de diseño de  tabla o en la de hoja de datos de tabla.
+                  Puede añadir una <i><b>regla de validación de campo</b></i> o una <i><b>regla de validación de registro</b></i>. 
+                  Una regla de validación de campo comprueba la entrada de un campo y se aplica cuando el foco deja el campo. 
+                  Una regla de validación de registro comprueba la entrada de uno o más campos y se aplica cuando el foco deja 
+                  el registro. Habitualmente, una regla de validación de registro compara los valores de dos o más campos.
+                
+                </p>
+                <p><h4 class="title">Observación:</h4> Los tipo de campo: Autonumeración, Objeto OLE y Datos adjuntos
+                   no admiten reglas de validación:
+                </p>
+            
+                
+            
+            <h2 class="title"> Reglas de validación de campo</h2>
+            
+            
+                <p>
+                  Puede usar una <b>regla de validación de campo</b> para especificar un <b>criterio que deben cumplir
+                  todos los valores de campo válidos</b>. En principio en una regla de validación de campo no se deberían tener que especificar el campo actual
+                  como parte de la regla a no ser que use el campo en una función. 
+                </p>
+               
+                  <center>
+                    <button class="respButton hvr-grow ">Operadores de reglas de validación</button>
+                      <div class="resp-box flexbox">
+                        <p>
+                          <div class="flexbox"> 
+                  
+                              
+                            <table class="tabla-funciones">
+                              <thead>
+                                <tr>
+                                  <th>Operador</th>
+                                  <th>Función</th>
+                                  <th>Ejemplo</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td class="nombre-funcion">Y</td>
+                                      <td>Especifica que todas las partes de la regla de validación deben cumplirse.</td>
+                                      <td>&gt;= #01/01/2007# Y &lt;=#06/03/2008#</b>
+                                        </p>
+                                        <div class="ocpAlert">
+                                <p class="ocpAlertSection"><b class="ocpNote">Nota: </b>Se puede usar <b class="ocpLegacyBold">Y</b> también para combinar reglas de validación. Por ejemplo: <b class="ocpLegacyBold">NO "Reino Unido" Y COMO "R*"</b>.</p>
+                              </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td class="nombre-funcion">O</td>
+                                      <td>Especifica que algunas partes (no todas) de la regla de validación deben cumplirse.</td>
+                                      <td>enero O febrero</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="nombre-funcion">&lt;</td>
+                                      <td>Menor que.</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="nombre-funcion">&lt;=</td>
+                                      <td>Menor o igual que.</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="nombre-funcion">&gt;</td>
+                                      <td>Mayor que.</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="nombre-funcion">&gt;=</td>
+                                      <td>Mayor o igual que.</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="nombre-funcion">=</td>
+                                      <td>Igual que.</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td class="nombre-funcion">&lt;&gt;</td>
+                                      <td>Distinto de.</td>
+                                      <td></td>
+                                    </tr>
+                                <tr>
+                                  <td class="nombre-funcion">NO</td>
+                                  <td>
+                                    <p>Comprueba si hay valores opuestos. Se puede usar delante de cualquier operador de comparación, salvo NO ES NULO.</p>
+                                  </td>
+                                  <td>NO &gt; 10</b> (es lo mismo que <b class="ocpLegacyBold">&lt;=10</b>).</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="nombre-funcion">EN</td>
+                                  <td>
+                                    <p>Comprueba si hay valores iguales a los elementos de una lista. El valor de comparación debe ser una lista de valores separados por comas que aparece entre paréntesis.</p>
+                                  </td>
+                                  <td>EN ("Tokio","París","Moscú")</td>
+                                </tr>
+                                <tr>
+                                  <td class="nombre-funcion">ENTRE</td>
+                                  <td>
+                                    <p>Comprueba si hay un intervalo de valores. Debe haber dos valores de comparación (un valor alto y un valor bajo) y esos valores deben ir separados por el separador Y.</p>
+                                  </td>
+                                  <td>ENTRE 100 Y 1000</b> (es lo mismo que <b class="ocpLegacyBold">&gt;=100 Y &lt;=1000</b>)</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="nombre-funcion">COMO</td>
+                                  <td>
+                                    <p>Busca cadenas modelo coincidentes en los campos de tipo Texto y Memo.</p>
+                                  </td>
+                                  <td>COMO "Geo*"</td>
+                                </tr>
+                                <!-- <tr>
+                                  <td>NO ES NULO</td>
+                                  <td>
+                                    <p>Obliga a los usuarios a escribir valores en el campo. Equivale a establecer el valor de la propiedad de campo <b class="ocpLegacyBold">Requerido</b> en <b class="ocpLegacyBold">Sí</b>. Sin embargo, cuando se habilita la propiedad <b class="ocpLegacyBold">Requerido</b> y un usuario no especifica un valor, Access muestra un mensaje de error poco descriptivo. En general, el uso de las bases de datos resulta más fácil si se utiliza NO ES NULO y se escribe un mensaje descriptivo en la propiedad <b class="ocpLegacyBold">Texto de validación</b>.</p>
+                                  </td>
+                                  <td>NO ES NULO</td>
+                                </tr>
+                              -->
+                              </tbody>
+                            </table>
+                              
+                          </div>
+                        </p>
+                      </div>
+                  </center>
+                </p>
+
+                <p><h3 class="title">Observación.</h3> Las restricciones sobre los tipos de caracteres que se 
+                  escriban en un campo pueden aplicarse más fácilmente con una máscara de entrada. </p>
+                <p>
+          <p>
+            <center>
+              <button class="respButton hvr-grow ">  Ejemplos basicos de reglas de validación de campo</button>
+                <div class="resp-box flexbox">
+                  <p> 
+                    <div class="flexbox">   
+                      <table class="tabla-funciones">
+                          <thead>
+                          <tr>
+                          <th>Regla de validación</th>
+                          <th>Descripción</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <tr>
+                          <td class="nombre-funcion">&lt;100</td>
+                          <td>El valor del campo debe ser inferior a 100.</td>
+                          </tr>
+                          <tr>
+                          <td class="nombre-funcion">&lt;= 100</td>
+                          <td>El valor del campo debe ser menor o igual a 100.</td>
+                          </tr>
+                          <tr>
+                          <td class="nombre-funcion">Entre 1 y 10</td>
+                          <td>El valor del campo debe estar entre 1 y 10.</td>
+                          </tr>
+                          <tr>
+                        <!--  <td>0 0</td>
+                          <td>No El valor del campo debe ser igual a 0.</td>
+                          </tr>
+                          <tr>
+                          <td class="nombre-funcion">&lt;1/1/95</td>
+                          <td>El valor del campo debe ser una fecha anterior al 1/1/95.</td>
+                          </tr>
+                          -->
+                          <tr>
+                          <td class="nombre-funcion">&gt; = Fecha ()</td>
+                          <td>El valor del campo debe ser la fecha de hoy o más tarde.</td>
+                          </tr>
+                          <tr>
+                          <td class="nombre-funcion">&lt;= Fecha ()</td>
+                          <td>El valor del campo debe ser la fecha de hoy o antes.</td>
+                          </tr>
+                          <tr>
+                          <td class="nombre-funcion">&#8220;Hombre&#8221; o &#8220;Mujer&#8221;</td>
+                          <td>El valor del campo debe ser &#8220;Hombre&#8221; o &#8220;Mujer&#8221;.</td>
+                          </tr>
+                          <tr>
+                          <td class="nombre-funcion">Como &#8220;??&#8221;</td>
+                          <td>El valor del campo debe tener dos caracteres.</td>
+                          </tr>
+                          <tr>
+                          <td class="nombre-funcion">Como &#8220;####&#8221;</td>
+                          <td>El valor del campo debe tener cuatro números.</td>
+                          </tr>
+                          </tbody>
+                      </table>  
+                    </div>
+                  </p>
+                  
+                </div>
+                
+            </center>
+          </p>
+          
+      
+
+
+                <h3 class="title">Ejemplo. Validación de fecha</h3>
+                <p>Puedes utilizar una regla de validación de campo para comprobar el valor especificado en un campo al
+                  salir de él. Por ejemplo, imagine que tiene un campo Fecha y escribe >=#01/01/2010# en la propiedad Regla de validación 
+                  de ese campo. La regla obligará a los usuarios a escribir fechas que coincidan con el 1 de enero de 2010 o
+                  sean posteriores. Si especifica una fecha anterior a 2010 e intenta colocar el foco en otro campo,
+                  Access no le permitirá abandonar el campo actual hasta que corrija el problema.
+                </p>
+             
+                <!--
+                <p>
+                  <h4>Ejemplos:</h4>
+                    <ul>
+                    <li>Impedir valores de fecha del pasado: >=Fecha()</li>
+                    <li>Número inferior o igual a cinco: <=5</li>
+                    <li>Restringir la longitud de caracteres de una cadena: Len([NombreCampoCadena])<100 </li>
+                    <li> Escribir fechas que coincidan con el 1 de enero de 2010 o sean posteriores:  >=#01/01/2010# </li>
+                    <p> Si especifica una fecha anterior a 2010 e intenta colocar el foco en otro campo, 
+                        Access no le permitirá abandonar el campo actual hasta que corrija el problema.</p>
+            
+                     
+                    </ul>
+                </p>
+                -->
+            
+            <!--
+                <p>
+                    Una regla de validación es una forma de limitar la información que se escribe en un campo de tabla
+                   o en un control (como un cuadro de texto) de un formulario. Con el texto de validación se puede
+                    incluir un mensaje que sirva de ayuda a los usuarios que escriben datos no válidos.
+                </p>
+            -->
+            
+
+          <h3 class="title"> Ejemplo: Validación por longitud</h3>
+
+            <p>Supongamos que tenemmos un campo <b>Contraseña</b> y queremos que este tenga una 
+            longitud mínima de 8 caracteres. Entonces podemos usar: </p>
+            <p>
+              <center>
+                <b>Como "????????*""</b>
+              </center>
+            </p>
+            Cuando ingrese la información, cada ? representa una posición que deberá rellenarse obligatoriamente,
+            y el * del final, nos indica que una vez cumplida la longitud mínima, ya se pueden indicar los caracteres 
+            que se consideren conveniente
+          </p>
+
+
+          <h3 class="title"> Ejemplo: Validación de Correo electrónico </h3>
+          <p>
+                      Supongamos que el formato requerido del campo correo electrónico es:
+              
+                      <ul>
+                      <li>Mas de tres caracteres y que el primero sea una letra</li>
+                      <li>Luego, el símbolo @</li>
+                      <li>Enseguida al menos tres carácteres</li>
+                      <li>Un punto (.)</li>
+                      <li>Y al final mínimo 2 caracteres alfabéticos</li>
+                      </ul>
+                      Para comprobar esas condiciones, podríamos escribir en la «Regla de validación de ese campo:
+              
+                      <p>
+                        <center>
+                          <b>Como "[A-Z]??*@???*.??*"</b>
+                        </center>
+                      </p>
+             
+          </p>
+                
+            
+                
+          
+          <p>
+          <center>
+          <button class="respButton hvr-grow ">  Ejemplos de regla de validación y texto de validación</button>
+            <div class="resp-box flexbox">
+              <p>
+                <div class="flexbox">   
+            
+                    <table class="tabla-funciones" >
+                        <thead>
+                          <tr>
+                            <th>Regla de validación</th>
+                            <th>Texto de validación</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="nombre-funcion">&lt;&gt; 0</td>
+                            <td>
+                              <p>Especifique un valor que no sea cero.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nombre-funcion">&gt;=0</td>
+                            <td>
+                              <p>El valor debe ser igual o mayor que cero.</p>
+                              <p>-o bien-</p>
+                              <p>Especifique un número positivo.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nombre-funcion">0 o &gt;100
+                            </td>
+                            <td>
+                              <p>El valor debe ser igual que cero o mayor que 100.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nombre-funcion">ENTRE 0 Y 1</td>
+                            <td>
+                              <p>Especifique un valor con un signo de porcentaje. (Se usa con los campos que almacenan los valores numéricos como porcentajes).</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nombre-funcion">&lt;#01/01/2007#</td>
+                            <td>
+                              <p>Especifique una fecha anterior a 2007.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nombre-funcion">&gt;=#01/01/2007# Y &lt;#01/01/2008#</td>
+                            <td>
+                              <p>La fecha debe ser del año 2007.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nombre-funcion"> &lt;Fecha()</td>
+                            <td>
+                              <p>La fecha de nacimiento no puede ser una fecha futura.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nombre-funcion">CompCadena(Mayús([Apellidos]),<br> [Apellidos],0) = 0</td>
+                            <td>
+                              <p>Los datos del campo Apellidos deben escribirse en mayúsculas.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nombre-funcion"> &gt;=Ahora()</td>
+                            <td>
+                              <p>Especifique la fecha de hoy.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nombre-funcion"> H O M </td>
+                            <td>
+                              <p>Escriba H para hombre o M para mujer.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nombre-funcion">COMO "S*"</td>
+                            <td>
+                              <p>El dato introducido debe comenzar con S</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="nombre-funcion">COMO "[A-Z]*@[A-Z].com" O "[A-Z]*@[A-Z].net" O "[A-Z]*@[A-Z].org"</td>
+                            <td>
+                              <p>Escriba una dirección de correo electrónico válida que termine en .com, .net u .org.</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+              </p>
+            </div>
+          </center>
+          </p>
+            
+          
+         
+            
+                <h2 class="title">Regla de validación de registro </h2>
+            
+                <p>
+                 Puede usar una regla de validación de registro para <b>especificar una condición que necesitan cumplir todos los 
+                 registros válidos</b>. Puede comparar valores de distintos campos con una regla de validación de registro.
+                 Por ejemplo, un registro con dos campos de fecha puede necesitar que los valores de un campo siempre sean anteriores a los del otro (por ejemplo, que FechaDeInicio sea anterior a FechaDeFinalización).
+                </p>
+                
+                <p>
+                  Use una regla de validación de registro para controlar cuándo puede guardar un registro (una fila de una tabla).
+                  A diferencia de una regla de validación de campo, la regla de validación de registro hace referencia a otros campos
+                  de la misma tabla. Las reglas de validación de registro se crean cuando es necesario comprobar los valores de un 
+                  campo en relación con los valores de otro campo. Por ejemplo, imagine que su empresa le obliga a enviar los
+                  productos en un plazo de 30 días y, si no lo hace, tendrá que reembolsar al cliente parte del precio de compra.
+                  Puede definir una regla de validación de registro como [FechaObligatoria]<=[FechaPedido]+30 para evitar que un
+                   usuario especifique una fecha de envío (el valor del campo FechaObligatoria) demasiado lejana en el futuro.
+                </p>
+                <p>
+                  <center>
+                    <button class="respButton hvr-grow ">  Ejemplos de regla de validación y texto de validación</button>
+                      <div class="resp-box flexbox">
+                        <p>
+                          <div class="flexbox">   
+                              <table class="tabla-funciones" >
+                                  <thead>
+                                    <tr>
+                                      <th>
+                                        Regla de validación
+                                      </th>
+                                      <th>
+                                        Texto de validación
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                
+                                    <tr>
+                                      <td class="nombre-funcion"><p>[FechaObligatoria]&lt;=[FechaPedido]+30</p></td>
+                                      <td>Escriba una fecha obligatoria que no sea posterior a un plazo de 30 días a partir de la fecha de pedido.</td>
+                                    </tr>
+                                    <tr>
+                                      <td class="nombre-funcion">[FechaFin]&gt;=[FechaInicio]</td>
+                                      <td>Escriba una fecha de fin que sea igual o posterior a la fecha de inicio.</td>
+                                    </tr>
+                                  </tbody>
+                              </table>
+                          </div>
+                        </p>
+                      </div>
+                    </center>
+                  </p>
+            
+            
+            <!-- <h2 class="number-title"> Validación en un formulario </h2>
+            
+            
+              <p>
+                   Puede usar la propiedad Regla de validación de un control de un formulario para especificar un
+                    criterio que deben cumplir todos los valores indicados para ese control. La propiedad de control 
+                    Regla de validación funciona como una regla de validación de campo. Normalmente, se usa una regla de validación
+                    de formulario en lugar de una regla de validación de campo si se trata de una regla específica del formulario
+                    y no de la tabla, sin importar donde se use.
+                  </p> -->
+              
+                
+  <!--
+
+          <h3 class="title"> Ejemplo.</h3>
+          <p>Supongamos que se desea almacenar información sobre estudiantes en una universidad pequeña.
+           Se desea almacenar y administar  la información mas relevante  de los alumnos</p>
+          
+              
+           <button class="respButton hvr-grow ">   Construya una tabla en Access de nombre Alumnos con la siguiente estructura 
+          </button>
+      <div class="resp-box flexbox">
+        <div class="flexbox">
+              <p>
+                 
+                  <ol>
+                      <li>Matrícula </li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 10</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (sin duplicados)</li>
+                      </ul>
+                      <li>Nombre(s)</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 20</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                      <li>Primer apellido.</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 25</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                      <li>Segundo apellido.</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 25</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                      <li>Fecha de nacimiento</li>
+                      <ul>
+                          <li>Tipo de dato: Fecha/Hora</li>
+                          <li>Formato: Fecha corta </li>
+                          <li>Mascara de entrada: Aspecto 26/01/1990</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                      <li>Genero</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 1</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                      <li>CURP</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 18</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (sin duplicados)</li>
+                      </ul>
+                      <li>NSS</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 12</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (sin duplicados)</li>
+                      </ul>
+                      <li>Tipo de Sangre</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 4</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                      <li>Calle</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 30</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                      
+                      <li>Número interior</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 4</li>
+                          <li>Requerido: No</li>
+                          <li>Indexado: No</li>
+                      </ul>
+                      <li>Número exterior</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 10</li>
+                          <li>Requerido: No</li>
+                          <li>Indexado: No</li>
+                      </ul>
+                      <li>Colonia</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 50</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                        <li>Municipio</li>
+                        <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 30</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                         <li>Código postal</li>
+                         <ul>
+                          <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 10</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                      <li>Estado</li>
+                      <ul>
+                      <li>Tipo de dato: Texto</li>
+                          <li>Tamaño de campo: 20</li>
+                          <li>Requerido: Si</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                      <li>Carrera</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                              <li>Tamaño de campo: 30</li>
+                              <li>Requerido: Si</li>
+                              <li>Indexado: Si (con duplicados)</li>
+                          </ul>
+                      <li>Tutor académico</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                              <li>Tamaño de campo: 60</li>
+                              <li>Requerido: Si</li>
+                              <li>Indexado: Si (con duplicados)</li>
+                          </ul>
+                      <li>Alumno regular</li>
+                      <ul>
+                          <li>Tipo de dato: Si/No</li>
+                          <li>Formato: Si/No</li>
+                              <li>Indexado: Si (con duplicados)</li>
+                          </ul>
+                      <li>Creditos acumulados</li>
+                      <ul>
+                          <li>Tipo de dato: Número</li>
+                              <li>Requerido: Si</li>
+                          </ul>
+                      <li>Becas de Alimentos</li>
+                      <ul>
+                          <li>Tipo de dato: Si/No</li>
+                          <li>Formato: Si/No</li>
+                          <li>Indexado: Si (con duplicados)</li>
+                      </ul>
+                          </ul>
+                      <li>Beca de  Colegiatura</li>
+                      <ul>
+                          <li>Tipo de dato: Si/No</li>
+                          <li>Formato: Si/No</li>
+      
+                              <li>Indexado: Si (con duplicados)</li>
+                          </ul>
+                      </ul>
+      
+                      <li>Correo electrónico</li>
+                      <ul>
+                          <li>Tipo de dato: Texto</li>
+                              <li>Tamaño de campo: 50</li>
+                              <li>Requerido: Si</li>
+                              <li>Indexado: Si (sin duplicados)</li>
+                          </ul>
+                      <li>Numero celular</li>
+                      <ul>
+                      <li>Tipo de dato: Texto</li>
+                      <li>Tamaño de campo: 10</li>
+                      <li>Requerido: Si</li>
+                      <li>Indexado: Si (sin duplicados)</li>
+                  </ul>
+                  
+                      
+                      
+                      
+                  </ol>
+              </p>
+      
+            -->
+
+            <h1 class="number-title"> Campos de busqueda</h1>
+
+            <p>Un campo de búsqueda es un campo en una tabla cuyo valor se obtiene de otra tabla o consulta.
+              Siempre que sea posible, debería usar al <b>Asistente para búsquedas</b> para crear un campo de búsqueda.
+              El Asistente para búsquedas simplifica el proceso, rellena automáticamente las propiedades del campo apropiado
+              y crea las relaciones de tabla adecuadas.
+            </p>
+            
+
+            <p>La creación de un campo de búsqueda no solo mejora el significado de los datos,
+              también le <b>ayuda a evitar errores de entrada de datos al limitar los valores que se pueden escribir</b>. </p>
+
+     
+            
+            <h2 class="number-title"> Un campo de búsqueda  en la vista Diseño: Lista de valores </h2>
+              <p>
+                <ol type="1" itemscope="" itemtype="http://schema.org/ItemList">
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <p>Abra la tabla en la <b class="ocpUI">Vista Diseño</b>.</p>
+                  <meta itemprop="position" content="1">
+                </li>
+
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <p>Haga clic en la columna <b class="ocpUI">Tipo de datos</b> de  la fila donde desea agregar la busqueda, 
+                      haga clic en la flecha y, a continuación, en la lista desplegable, seleccione <b class="ocpUI">Asistente para búsquedas</b>.</p>
+                    <p>
+                    <!--  <b class="ocpRunInHead">Nota</b>   El Asistente para búsquedas crea tres tipos de listas: búsqueda, valores y campos multivalor, según las opciones que elija en el asistente.</p>
+                  <meta itemprop="position" content="3">
+                  -->
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <p>Una vez en el asistente:</p>
+                    <ol type="a" itemscope="" itemtype="http://schema.org/ItemList">
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <p>En la primera página, seleccione <b class="ocpUI">Escribiré los valores que desee</b> y
+                          haga clic en <b class="ocpUI">Siguiente</b>.</p>
+                      <meta itemprop="position" content="1">
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <p>En la segunda página, indique el numero de columnas que desea y los valores que se 
+                          mostrarán dentro de la lista desplegable <b class="ocpUI">Siguiente</b>.</p>
+                      <meta itemprop="position" content="2">
+                </li>
+
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <p>En la tercera página, conserve el nombre del campo o escriba uno nuevo, y 
+                          elija si desea delimitar las entradas a las opciones dadas o bien si desee 
+                          permitir seleccionar varios valores de la lista, a continuación, haga clic en
+                          <b class="ocpUI">Finalizar</b>. </p>
+                        
+                      <meta itemprop="position" content="6">
+                </li>
+                </ol>
+                  <meta itemprop="position" content="4">
+                </li>
+                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                    <p>Guarde los cambios.</p>
+                  <meta itemprop="position" content="5">
+                </li>
+                </ol>
+              </p>
+            
+            <h2 class="number-title">Crear un campo de búsqueda  en la vista Diseño: Tabla/consulta </h2>
+              <p>
+               
+                        <ol type="1" itemscope="" itemtype="http://schema.org/ItemList">
+                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                      <p>Abra la tabla en la <b class="ocpUI">Vista Diseño</b>.</p>
+                                    <meta itemprop="position" content="1">
+                            </li>
+                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                      <p>En la primera fila vacía disponible, haga clic en una celda en la columna <b class="ocpUI">Nombre de campo</b> y escriba un nombre para el campo de búsqueda.</p>
+                                    <meta itemprop="position" content="2">
+                            </li>
+                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                      <p>Haga clic en la columna <b class="ocpUI">Tipo de datos</b> de dicha fila, haga clic en la flecha y, a continuación, en la lista desplegable, seleccione <b class="ocpUI">Asistente para búsquedas</b>.</p>
+                                      <p>
+                                        <h5 class="title">Nota.</h5>   El Asistente para búsquedas crea tres tipos de listas: búsqueda, valores y campos multivalor, según las opciones que elija en el asistente.</p>
+                                    <meta itemprop="position" content="3">
+                            </li>
+                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                      <p>Siga con cuidado estos pasos en el asistente:</p>
+                                      <ol type="a" itemscope="" itemtype="http://schema.org/ItemList">
+                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                          <p>En la primera página, seleccione <b class="ocpUI">Deseo que el campo de búsqueda obtenga los valores de otra tabla o consulta</b> y haga clic en <b class="ocpUI">Siguiente</b>.</p>
+                                        <meta itemprop="position" content="1">
+                                </li>
+                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                          <p>En la segunda página, seleccione la tabla o consulta que contiene los valores y, a continuación, haga clic en <b class="ocpUI">Siguiente</b>.</p>
+                                        <meta itemprop="position" content="2">
+                                </li>
+                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                          <p>En la tercera página, seleccione uno o más campos y, a continuación, haga clic en <b class="ocpUI">Siguiente</b>.</p>
+                                        <meta itemprop="position" content="3">
+                                </li>
+                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                          <p>En la cuarta página, seleccione un criterio de ordenación de los campos al mostrarse en una lista y, a continuación, haga clic en <b class="ocpUI">Siguiente</b>.</p>
+                                        <meta itemprop="position" content="4">
+                                </li>
+                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                          <p>En la quinta página, ajuste el ancho de la columna para que los valores sean más fáciles de leer y, a continuación, haga clic en <b class="ocpUI">Siguiente</b>.</p>
+                                        <meta itemprop="position" content="5">
+                                </li>
+                                <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                          <p>En la sexta página, conserve el nombre del campo o escriba uno nuevo, seleccione <b class="ocpUI">Habilitar integridad de datos</b>, elija una opción de <b class="ocpUI">Eliminación en cascada</b> o <b class="ocpUI">Eliminación restringida</b> y, a continuación, haga clic en <b class="ocpUI">Finalizar</b>. </p>
+                                          <!-- <p>Para obtener más información sobre cómo reforzar la integridad referencial, vea <a href="/es-es/office/crear-modificar-o-eliminar-una-relaci%C3%B3n-dfa453a7-0b6d-4c34-a128-fdebc7e686af" class="ocpArticleLink">Crear, modificar o eliminar una relación</a>.</p> -->
+                                        <meta itemprop="position" content="6">
+                                </li>
+                              </ol>
+                                    <meta itemprop="position" content="4">
+                            </li>
+                            <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                                      <p>Guarde los cambios.</p>
+                                    <meta itemprop="position" content="5">
+                            </li>
+                          </ol>
+                        
+              </p>
+
+              <h1 class="number-title"> Relaciones</h1>
+              <p>
+                  Uno de los objetivos de un buen diseño de base de datos es eliminar la redundancia de los datos (datos duplicados).
+                  Para conseguirlo, conviene dividir  los datos/información  en muchas tablas basadas en temas para que cada hecho
+                  esté representado solo una vez. Después, se debe proveer a Access de un medio para recopilar de nuevo 
+                  la información desglosada  colocando campos comunes en tablas que estén relacionadas. De esta manera es posible 
+                  crear <em>consultas</em>, <em>formularios</em> e <em>informes</em> que muestren a la vez la información de varias tablas.
+              </p>
+          
+              <h2 class="number-title"> Clave principal</h2>
+              <p>Recordemos que la <b>clave (llave) principal (primaria)</b> de una tabla  es una columna (o combinación de columnas)     que     permite identificar 
+                  de forma inequívoca/exclusiva  cada  fila/registro almacenado en  la tabla, 
+                  El tipo de campo para una clave principal puede ser “Texto” o
+                  “Autonumérico” (el campo contador de Access).
+              </p>
+              <p>Una <b>clave foránea</b> es una columna (o combinación de columnas)
+                  que contiene un valor que hace referencia a una fila de otra tabla (en algunos casos puede ser la misma tabla).
+                 </p>
+              
+             <p>
+              Para establecer la clave principal haga clic en el campo que desee utilizar como clave
+              principal. Si desea crear una clave principal de múltiples campos, mantenga presionada la
+              tecla <em>Crtl</em>  y haga clic sobre cada uno de los campos que desee incluir. 
+             </p>
+          
+           
+               <p><h3 class="title">Observación.</h3>
+              Una tabla tiene una única clave principal. Una tabla puede contener cero o más claves foráneas.  Cuando se define una columna como clave principal 
+              no pueden haber en una tabla dos filas/registros  con el mismo  valor en la columna definida como clave principal, y ademas  ninguna fila de la tabla 
+              puede  contener un valor nulo en esa columna. Mientras que cuando se define una columna como clave foránea,  las filas de la tabla pueden contener 
+              en esa columna o bien el valor nulo, o bien un valor que existe en la otra tabla.  Esto último es lo que se 
+              denomina <i><b>integridad referencial</b></i>
+              que consiste en que los datos que referencian otros (clave foránea) deben ser correctos.
+              </p>
+          
+          
+             <h2 class="number-title"> Tipos de relaciones entre tablas</h2>
+          
+          
+             <p>El poder de una base de datos relacional reside en la combinación de datos entre tablas.
+              Para ello,  debemos establecer relaciones entre las tablas. Una <b>relación</b> en Access permite 
+              combinar datos de dos tablas distintas.
+           </p>
+             
+          
+            
+             <!-- <p><h3 >Ejemplo:</h3>  
+              Si tenemos dos tablas,  alumnos y cursos, en la tabla de alumnos pondríamos una columna curso: para saber en qué curso
+              está matriculado el alumno, la columna curso en la tabla de alumnos es clave foránea, mientras que la columna codigo 
+              de la tabla de cursos será clave primaria.
+              </p> -->
+          
+          
+              
+          
+             <p>
+              Entre dos tablas de cualquier base de datos relacional pueden haber tres tipos de relaciones entre tablas,
+              relaciones uno a uno, relaciones uno a mucho y relaciones varios a varios:
+             </p>
+             
+             <ul>
+             <li><h3 class="title"> Relación Uno a Uno:</h3></li>
+             <p>
+              En este tipo de relación un registro de la tabla principal se relaciona con un solo registro
+              de la tabla secundaria y un registro de la tabla secundaria se relaciona con un solo registro de
+              la tabla principal.
+             </p>
+          
+             <p>
+              Esta relación no es común porque la mayor parte de las veces la información relacionada de este modo 
+              se almacena en la misma tabla. Puede usar la relación uno a uno para dividir una tabla  con muchos campos,
+              para aislar parte de una tabla por razones de seguridad o para almacenar información que solo se aplica 
+              a un subconjunto de la tabla principal.
+             </p>
+             
+             <!-- <h3 class="title">Ejemplo: Relacion Uno a Uno </h3>
+              <p>
+                Entre las tablas  profesores e institutos queremos saber que profesor el el director del instituto
+                entonces, tenemos una relación uno a uno entre las dos tablas ya que un instituto tiene un solo director y un profesor 
+                puede ser director de un solo instituto.
+              </p> -->
+             <li><h3 class="title"> Relación Uno a Varios: </h3></li>
+              
+            <p>
+              Esta relación indica a Access que hay un registro en la tabla principal que se relaciona  con un solo registro de la tabla secundaria.
+              Este tipo de relación es el más frecuente en una base de datos relacional.
+            </p>
+            
+            <li><h3 class="title">Relación Varios a Varios:</h3></li> 
+             <p>
+              En este tipo de relación un registro de la tabla principal puede relacionarse con más de
+              un registro de la tabla secundaria y un registro de la tabla secundaria también puede
+              relacionarse con más de un registro de la tabla principal. 
+             </p>
+          
+             <p>
+              Para detectar las relaciones “varios a varios” entre las tablas, es importante que observe 
+              la relación en los dos sentidos. Este tipo de relación requiere cambiar el diseño de la base de datos
+              antes de poder especificar correctamente la relación, porque es muy complicado para el administrador de la
+              base extraer la información de las tablas secundarias así. La solución es crear una tercera tabla
+              que divida la relación “varios a varios” en dos relaciones “uno a varios”. En esta tercera tabla
+              se incluiría la clave principal de cada una de las dos tablas anteriores.
+             </p>
+             
+             Cuando uno o más elementos en una tabla puede tener una relación con uno o más elementos 
+             de otra tabla. 
+             
+             <p>Para representar una relación de varios a varios, debe crear una tercera tabla, a menudo denominada tabla de unión, 
+                    que divide la relación de varios a varios en dos relaciones uno a varios. Debe insertar la clave principal de cada 
+                    una de las dos tablas en la tercera. Como resultado, la tercera tabla registra cada ocurrencia, o instancia, 
+                    de la relación
+                 </p>
+             
+             </ul>
+             
+             <h2 class="number-title"> Integridad referencial</h2>
+          
+                 <p>
+                   La <b>integridad referencial</b> es un sistema de reglas que utilizan la mayoría de las bases
+                   de datos relacionales para asegurarse que los registros de tablas relacionadas son válidos
+                   y que no se borren o cambien datos relacionados de forma accidental produciendo errores de integridad.
+                   El propósito de la integridad referencial es <b>evitar los registros huérfanos y mantener las referencias 
+                   ente las tablas relacionadas sincronizadas</b>.
+                  </p>
+          
+          
+                <h3 class="title">Ejemplo</h3>  
+                <p>
+                  Supongamos que tenemos una relación de uno a varios entre las tablas Transportistas y Pedidos y vamos a
+                  eliminar un transportista. Si el destinatario que desea quitar tiene pedidos en la tabla Pedidos, dichos pedidos quedarán
+                  <i>"huérfanos"</i> si elimina el registro Transportista. Los pedidos todavía contendrán un Id. de transportista, 
+                  pero el Id. ya no será válido, porque el registro al que hace referencia ya no existe.
+                  </b>
+                  
+                  <p>
+                  Para exigir la integridad referencial, es preciso habilitarla para una relación de tabla. Una vez habilitada,
+                  Access rechazará todas las operaciones que infrinjan la integridad referencial para esa relación de tabla. 
+                  Esto significa que Access rechaza las actualizaciones que cambien el destino de una referencia,
+                  así como las eliminaciones que quiten el destino de una referencia. Sin embargo, es posible que tenga la
+                  necesidad perfectamente válida de cambiar la clave principal de un transportista que tiene pedidos en la 
+                  tabla Pedidos. Para tales casos, lo que realmente necesita es que Access actualice automáticamente todas las
+                  filas afectadas como parte de una única operación. De ese modo,  Access se asegura de que la actualización es 
+                  completa y la base de datos no tiene un estado incoherente, con algunas filas actualizadas y otras no.
+                  Por ello, Access incluye la opción <b><i>Actualizar/Eliminar en cascada</i></b> los campos relacionados.
+                  </p>
+                  
+                  <center>
+                    <p>
+                      <div class="flexbox">
+                        <img src="..\Imagenes\S5\Integridad_referencial.PNG" alt="relaciones" width="55%" height="auto">
+                      </div>
+                    </p>
+                  </center>
+          
+                <ul>
+                    <li><h3 class="title">Actualizar en cascada</h3>
+                      <p>
+                      Cuando se aplica la integridad referencial y se selecciona la opción Actualizar
+                      en cascada. Si actualiza o modifica una clave principal, Access actualiza 
+                      automáticamente todos los  campos que hagan referencia a la clave principal.
+                      </p>
+                    </li>
+                  
+                    <li><h3 class="title">Eliminar  en cascada</h3>
+                      <p>
+                      Cuando se aplica la integridad referencial y se selecciona la opción Eliminar en cascada.
+                      Access eliminará todos los registros relacionados cuando borre un registro principal, por ejemplo 
+                      si elimina un cliente, Access también borrara todos los registros de los pedidos para ese cliente.
+                      </p>
+                    </li>
+              </ul>  
+          
+          
+          
+                
+              
+              <p><h3 class="title">Observación:</h3>
+                  La relación entre dos tablas es única y se establece siempre a través de un campo común a ambas.
+                  <b>No es necesario que el campo tenga el mismo nombre, pero sí es recomendable  nombrar 
+                  los campos comunes del mismo modo</b>, para evitar posibles equivocaciones a la hora de crear las relaciones.
+                  </p> 
+
+
+            <h1 class="number-title"> Vista relaciones</h1>
+          
+            <p>Para ver todas las relaciones existentes definidas para una base de datos,
+            abra la base de datos de Access, vaya a la pestaña <b>Herramientas de base de datos</b> y,
+             a continuación, seleccione <b>Relaciones</b>.
+          </p>
+          
+          Las líneas en la vista Relaciones indican las conexiones entre las tablas.
+          En la siguiente imagen, la tabla a la izquierda es la <b>tabla primaria</b>. 
+          La tabla a la derecha es la <b>tabla secundaria</b>. La línea entre ellas conecta
+          los campos (en este caso, Numero de trabajador,  Director) usados para emparejar los datos.
+          <p>
+            <div class="flexbox">
+                <img src="../Imagenes/S5/relaciones.png" alt="relaciones" width="55%" height="auto">
+            </div>
+          </p>
+            
+          <p>Las líneas y los símbolos muestran cómo se relacionan las tablas:</p>
+          
+          <ul>
+              <li>Una <b>línea de conexión gruesa</b> significa que exige integridad referencial de datos.
+                   Eso es bueno. Mantiene sus datos sincronizados. </li><br>
+          
+              <li>En la ilustración, el <b>número 1</b> indica que puede haber un único registro coincidente en esa tabla. 
+
+                  <!-- En la tabla pedidos que se muestra aquí, un único registro coincide con cada pedido. --></li>
+                  <br>
+                  
+              <li>El <b>símbolo ∞</b> indica que muchos de los registros pueden incluir la misma Id. 
+                  <!-- En la tabla Detalles de pedido que se muestra aquí, puede aparecer un pedido 
+                  (indicado con su Id. de pedido) varias veces porque el mismo pedido puede incluir varios productos.-->
+              </li>
+          
+          </ul>
+          
+          <h3 class="title">Observaciones:</h3>
+          <p></p>
+          <ul>
+              <li><h5 class="title">Crear una relación Uno a Uno</h5>
+              <p>Ambos campos comunes (normalmente, los campos de clave principal y clave externa) deben tener un índice único.
+              Esto significa que la propiedad Indizado de estos campos debe tener el valor Sí (Sin duplicados). 
+              Si ambos campos tienen un índice único, Access crea una relación uno a uno.
+            </p>
+              
+              <li><h5 class="title"> Para crear una relación uno a varios</h5>
+              <p>El campo en el lado uno de la relación (normalmente, el campo de clave principal) debe tener un índice único.
+              Esto significa que la propiedad Indizado de este campo debe tener el valor Sí (Sin duplicados). El campo ubicado 
+              en el lado varios de la relación no debe tener un índice único. Puede tener un índice, pero debe permitir los
+              duplicados. Esto quiere decir que la propiedad Indizado de este campo debe tener el valor No o Sí (Con duplicados). 
+              Cuando un campo tiene un índice único y el otro no, Access crea una relación uno a varios.
+              </p></li>
+          </ul>
+          
+          </p>
+          <p><center>
+          <div class="flexbox">
+              <img src="../Imagenes/S5/relaciones_base_datos.PNG" alt="relaciones" width="101%" height="auto">
+            </div>
+          </center></p>
+          
+          
+        
+              <h1 class="number-title"> Consultas </h1>
+              
+               <p>El objetivo de una consulta es poder analizar los datos que previamente hemos
+                introducido en nuestra base de datos. Los datos de una consulta pueden proceder 
+                de una o varias tablas. Una vez creada una consulta se le puede utilizar para crear un formulario, 
+                un informe, un gráfico e incluso para otra consulta. Por ejemplo: Es posible  crear una consulta
+                que nos muestre las ventas realizadas en el último año.
+               </p>
+          
+              <h2 class="number-title"> Tipos de Consultas</h2>
+          
+              <p>
+              En general existen dos  tipos de consultas en Access: <b><i>Consultas de selección</i></b> 
+              y <b><i>consultas de acción</i></b>. Las 
+              consultas de selección permiten seleccionar informacin de un conjunto de datos mientras que con 
+              las consultas de acción podemos además operar  sobre  los datos seleccionados.
+              </p>
+          
+              <p>
+              A su vez hay tres tipos de consultas de acción: de actualización, de eliminación  y de datos anexados. 
+              </p>
+          
+          
+              <ul>
+              <li><h3 class="title">Consultas de selección.</h3></li>
+          
+              <p>
+               Es la más utilizada, con este tipo de consulta se pueden ver los datos de las tablas, analizar
+               dichos datos e incluso hacer cambios en ellos. Es posible ver datos procedentes de una sola
+               tabla o consulta, o bien agregar campos de varias tablas o consultas distintas.
+              </p>
+          
+             
+          
+              <p>
+              Son las consultas que extraen o nos muestran datos. Muestran aquellos datos de una tabla que cumplen
+              los criterios especificados. Una vez obtenido el resultado podremos consultar los datos para modificarlos 
+              (esto se podrá hacer o no según la consulta). Una consulta de selección genera una tabla lógica
+              (se llama lógica porque no está físicamente en el disco duro sino en la memoria del ordenador y
+              cada vez que se abre se vuelve a calcular).
+              </p>
+          
+             
+              <li><h3 class="title">Consultas de acción.</h3></li>
+          
+          
+              Las consultas de acción son aquellas que, además de permitir la selección de datos,
+              posibilitan efectuar operaciones con estos, con el objetivo de obtener resultados que modifiquen
+              la información o estructura de la base de datos. Mencionaremos brevemente sus variantes:
+          
+              <ul>
+                <li> 
+                <h5 class="title"> Consultas de creación de tablas:</h5> Permiten crear nuevas tablas con base en el contenido de otras. El contenido de las nuevas puede
+                  incluir parcial o completamente el contenido de otra tabla.
+                </li>
+          
+                <li><h5 class="title"> Consultas de referencias cruzadas:</h5> Posibilitan realizar cálculos con los datos existentes en las tablas. Se pueden llevar a cabo cálculos 
+                  de totales, con base en los valores de un determinado campo, agrupándolos tanto en columnas como en filas.
+                </li>
+          
+                <li><h5 class="title"> Consultas de datos anexados:</h5>
+                  
+                  Permiten agregar datos en tablas existentes. Debe existir la tabla original (que es la que contiene los
+                  datos) y la tabla destino (la cual recibirá los nuevos datos). Es decir que se copiarán los
+                  datos de la tabla original en la tabla destino.
+                </li>
+
+                <li><h5 class="title"> Consultas de eliminación: </h5>
+          
+                  Eliminan registros de una tabla que cumplan con los criterios especificados. Este tipo de consultas 
+                  permite supresiones ágiles, pero debemos tener cuidado ya que luego no es posible recuperar los datos borrados.
+                </li>
+
+                <li><h5 class="title"> Consultas de actualización: </h5>
+                  Eliminan registros de una tabla que cumplan con los criterios especificados. Este tipo de consultas 
+                  permite supresiones ágiles, pero debemos tener cuidado ya que luego no es posible recuperar los datos borrados.
+                  
+              </ul>
+          
+              </ul>
+
+            <h2 class="number-title"> Combinaciones </h2>
+            <p>
+              <div class="flexbox">
+                  <img src="..\Imagenes\S6\nueva_combinacion.PNG" alt="relaciones" width="40%" height="auto">
+                </div>
+            </p>
+            
+            <p>Al crear una relación, es posible agregar una combinación. Uno de los campos es arrastrado
+              de una tabla origen de datos hasta el campo correspondiente de otra tabla. La tabla desde
+              la que arrastra es la que aparecerá a la izquierda en el <b><i>cuadro de diálogo de la combinación</i></b>.
+            </p>
+            <p>
+              <div class="flexbox">
+                  <img src="..\Imagenes\S6\Combinaciones.PNG" alt="relaciones" width="40%" height="auto">
+              </div>
+            </p>
+              
+            <p>
+              De forma predeterminada, Access crea una <em>combinación interna</em>.
+              Si necesita una <em>combinación externa</em>, puede  cambiar su tipo.
+            </p>
+            <ul>
+              <li><h3 class="title">Combinaciones internas</h3>
+              <p>
+              Solo incluye las filas (registros) en la que los campos combinados de ambas tablas sean iguales, es decir, 
+              solo muestran los datos cuando hay un identificador coincidente de ambos orígenes de datos 
+              conectados. 
+              </p>
+              
+              
+              <p>
+              <h4 class="title">Ejemplo:</h4> Si desea mostrar los productos y cantidades vendidos, 
+              debe crear una combinación interna entre
+              las tablas Productos y Detalles del pedido. Cuando se ejecuta la consulta, solo devolverá
+              los productos que aparecen en pedidos (solo los productos que tienen pedidos asociados
+              con ellos) y que, por tanto, aparecen en ambas tablas 
+              </p>
+              
+              <p>
+                  La mayoría de las veces, no es necesario hacer nada para usar una combinación interna. 
+                  Si las tablas que agrega a una consulta ya tienen relaciones, Access crea automáticamente una combinación interna
+                  entre cada par de tablas relacionadas, al agregar las tablas. Si se aplica la integridad referencial,
+                  Access muestra también un "1" sobre la línea de la combinación para indicar la tabla del lado "uno" de una relación
+                  de uno a varios y un símbolo de infinito (∞) para indicar la tabla del lado "varios"
+              </p>
+              
+              <p>
+                  Incluso si no ha creado relaciones, Access crea automáticamente combinaciones internas si agrega dos tablas a una 
+                  consulta y cada una de ellas tiene un campo con el mismo tipo de datos o compatible y uno de los campos de
+                  combinación es un clave principal. Los símbolos "uno" y "varios" no se muestran en este caso, porque no se
+                   exige la integridad referencial.
+              </p>
+              </li>
+              <li><h3 class="title">Combinaciones externas</h3>
+              
+              <p>
+              A veces, en las consultas, desea ver todos los registros de una tabla junto con los registros coincidentes de otra.
+              Para ello, podemos utilizar las <b>combinaciones externas</b>. Las combinaciones externas indican  a una consulta que,
+              aunque algunas de las filas de ambos lados de la combinación se corresponden exactamente, la consulta debe incluir
+              todas las filas de una tabla y también las filas de la otra tabla que comparten un valor común a ambos lados
+              de la combinación. 
+              </p>
+              
+              <p><h4 class="title">Ejemplo:</h4> Si deseas ver qué productos todavía no ha vendido, crea 
+              una consulta que muestre la IDProducto
+              de la tabla Producto y las IDPedido coincidentes de la tabla DetallesPedido.
+              Los productos que no tengan registros coincidentes en la tabla DetallesPedido
+              devuelven el nombre del producto sin ningún valor en el campo IDPedido.   
+              </p>
+              
+              <!-- <h3>Combinaciones externas izquierdas y combinaciones externas derechas</h3> -->
+              
+              <p>Las combinaciones externas pueden ser combinaciones <b><i>externas izquierdas</i></b> o pueden ser combinaciones 
+                <b><i>externas derechas</i></b>. En una combinación externa, la tabla que muestra <b>todos sus registros</b> se denomina <b>tabla base.</b>
+              La tabla que muestra <b>solo algunos registros</b> (coincidentes) se denomina <b>tabla secundaria.</b>
+              </p>
+              
+              <ol>
+               <li><h5 class="title">Combinaciones externas izquierdas: </h5>
+              
+              <p>
+              Incluye <b>todos</b> los registros de la tabla con el nombre Izquierda y <b>solo</b> aquellos registros de la tabla
+              con el nombre Derecha en los que los campos combinados sean iguales, por ejemplo, todos los pedidos,
+              pero solo las cantidades y el Id. de producto de aquellos pedidos que tienen productos asociados con ellos.   
+              </p>
+            </li>  
+               <li><h5 class="title">Combinaciones externas derechas: </h5>
+              
+              <p>
+              Incluye <b>todos</b> los registros de la tabla con el nombre Derecha y <b>solo</b> aquellos registros de la tabla con el nombre
+              Izquierda en los que los campos combinados sean iguales, por ejemplo,todos los productos,
+              incluso aquellos para los que no hay pedido, en cuyo caso mostrará valores en blanco en los campos Cantidad 
+              e Id. de pedido.   
+              </p>
+            </li>
+              </ol>
+              
+              
+              <p><b>Observacion:</b> Es importante saber qué tabla está a la izquierda y cuál está a la derecha, pues puede diferenciar 
+              la forma en la que las tablas se organizan en la ventana de consulta. Para entender qué datos recibirá de su consulta,
+              lea el texto cuidadosamente en el cuadro de diálogo Propiedades de la combinación.
+              </p>
+
+            </li>
+          </ul>
+              <h2 class="number-title"> Criterios de consulta</h2>
+              
+              <p>
+              Los criterios de consulta ayudan a centrar la búsqueda en elementos específicos de la base de datos de Access.
+              Si algún elemento coincide con todos los criterios introducidos, aparecerá en los resultados de la consulta. 
+              Para agregar un criterio a una consulta de Access, ábrala en la vista Diseño e identifique los campos (columnas)
+              para los que desea especificar criterios. Si este campo no está en la cuadrícula de diseño, haga doble clic en el 
+              campo para agregarlo y entonces escriba el criterio en la fila Criterios de ese campo
+              </p>
+              
+              
+              
+              <p>
+              Un criterio de busqueda es una expresión/cadena que puede estar compuesta por referencias de campo, operadores y constantes. 
+              Access compara estas expresiones con valores de campo de consulta para determinar si incluir
+              el registro que contiene cada valor. Por ejemplo, = "Oaxaca" es una expresión que Access puede comparar con valores de un campo
+              de texto en una consulta. Si el valor de ese campo en un registro determinado es "Oaxaca", Access incluye el registro en los resultados de la consulta.   
+              </p>
+              
+              
+              
+              
+              
+              <p>A continuación se presentan  distintos operadores que podemos utilizar en una condición/criterio dentro de una regla de validación y/o consulta.</p>
+              
+              
+              
+              <!--
+              <button class="respButton hvr-grow ">  Encabezados de columna </button>
+              <div class="resp-box flexbox">
+              <div class="flexbox">  
+              <h3>Encabezados de columna:</h3>
+              <p>
+               Podemos cambiar el encabezado de las columnas del resultado de la consulta.
+              </p>
+              <p>
+               Normalmente aparece en el encabezado de la columna el nombre de la columna, si queremos cambiar ese encabezado lo 
+               indicamos en la fila Campo: escribiéndolo delante del nombre del campo y seguido de dos puntos ( : ). Se suele 
+               utilizar sobre todo para los campos calculados.
+              </p>
+              </div>
+              </div>
+              -->
+<!--               
+              
+              <button class="respButton hvr-grow ">  Campos calculados </button>
+              <div class="resp-box flexbox">
+              <div class="flexbox">   -->
+              <ul>
+                <li><h3 class="title">Campos calculados</h3>
+                  <p>
+                  Al igual que podemos definir en una tabla un campo cuyo tipo de datos sea Calculado también podemos incluir campos
+                  calculados en las consultas.
+                  </p>
+                  
+                  <p>
+                  ¿Cuándo incluir la expresión en una tabla y cuándo en una consulta? La respuesta dependerá de cada caso concreto. 
+                  Si el resultado de la expresión se va a utilizar frecuentemente en consultas, listados o estadísticas, puede ser más
+                  interesante guardar el dato en la propia tabla. Si en cambio se trata de un cálculo más específico puede ser preferible
+                  no utilizar espacio en el disco para conservar estos valores, definiendo un campo calculado en la consulta.
+                  </p>
+                  
+                  <p>
+                  Para crear a cabo un campo calculado, debemos situarnos en una celda vacía del diseño de la consulta y escribir la sintaxis
+                  correspondiente, que se compone de:
+                  <ul>
+                  <li><h5 class="title">Nombre del campo:</h5>
+                    Cadena de caracteres que se corresponde con el nombre que tendrá el campo que se calculará.
+                  </li>
+                  <li><h5 class="title">Dos puntos:</h5>
+                    Luego de escribir el nombre del campo, tenemos que agregar dos puntos (:) para separarlo del cálculo que se va a realizar.
+                  </li> 
+                  <li><h5 class="title">Fórmula:</h5>
+                    Sintaxis que determina los cálculos que se deben hacer para obtener los valores del nuevo campo. En nuestro caso, la sintaxis es:
+                    <p>
+                      <center> 
+                        <b>Total:[Precio]*[Cantidad]</b>
+                      </center>
+                    </p>
+                  </li>
+                </ul>
+                  <p><b>Observación:</b> En el caso de las consultas, los campos calculados   las operaciones unicamente pueden ser definidas sobre  
+                      campos con datos númericos  
+                  </p>
+                </li>
+              </ul>
+
+              
+              <!-- <button class="respButton hvr-grow "> El operador Como </button>
+              <div class="resp-box flexbox">
+              <div class="flexbox">   
+               -->
+                  <h3 class="title">El operador Como    </h3>
+                  <p>Se utiliza cuando queremos utilizar caracteres comodines para formar el valor con el que comparar.</p>
+                  
+                  <p><h4 class="title">Ejemplo.</h4>
+                  Si queremos visualizar los empleados cuyo nombre acabe en 'o'. Tenemos que utilizar el comodín *
+                  y utilizar el operador <b>Como</b> para que Access reconozca el * como un comodín y no como el carácter asterisco.
+                  La condición sería nombre como '*o'.
+                  </p>
+                  
+                  <p>
+                   El valor que contiene los comodines se conoce como patrón y tiene que ir encerrado entre comillas (simples o dobles). 
+                   La sintaxis es la siguiente:
+                  </p>
+                  <center> <b>Expresión Como 'patrón'</b></center>
+                  
+                  <p>En la siguiente tabla se  indican los caracteres comódines que se pueden poner en un
+                     patrón y su significado.
+                  </p>
+                  <center>
+                  <table class="tabla-funciones">
+                    <thead>
+                      <tr>
+                        <th>Caracteres en patr&oacute;n</th>
+                        <th>Significado</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     
+                      <tr>
+                        <td class="nombre-funcion">?</td>
+                        <td>Un car&aacute;cter cualquiera</td>
+                      </tr>
+                      <tr>
+                        <td class="nombre-funcion">*</td>
+                        <td>Cero o m&aacute;s caracteres</td>
+                      </tr>
+                      <tr>
+                        <td class="nombre-funcion">#</td>
+                        <td>Un d&iacute;gito cualquiera (0-9)</td>
+                      </tr>
+                      <tr>
+                        <td class="nombre-funcion"><strong>[</strong>ListaCaracteres<strong>]</strong></td>
+                        <td>Un car&aacute;cter cualquiera de listacaracteres</td>
+                      </tr>
+                      <tr>
+                        <td class="nombre-funcion"><strong>[!</strong>ListaCaracteres<strong>]</strong></td>
+                        <td>Un car&aacute;cter cualquiera no incluido en listacaracteres</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </center>
+                  
+                  
+                  <ul>
+                    <li>
+                       <p>
+                       <b>ListaCaracteres:</b> representa una lista de caracteres y puede incluir casi cualquier carácter, incluyendo dígitos, 
+                        los caracteres se escriben uno detrás de otro sin espacios en blanco ni comas. Por ejemplo para sacar los nombres
+                        que empiezan por a,g,r o v el patrón sería: '[agrv]*'
+                      </p>
+                    </li>
+                  
+                      <li>
+                      <p>
+                      Los caracteres especiales corchete de apertura [, interrogación ?, Hashtag # y asterisco * dejan de ser 
+                      considerados comodines cuando van entre corchetes. Por ejemplo para buscar los nombres que contienen un asterisco,
+                      el patrón sería: '*[*]*' en este caso el segundo * dentro del patrón no actúa como comodín sino como un carácter 
+                      cualquiera porque va dentro de los corchetes.
+                      </p>
+                      </li>
+                    
+                      <li>
+                       <p>Si no se encierra entre corchetes, la exclamación ! representa el carácter exclamación.</p>
+                      </li>
+                      
+                      <li>
+                      <p>
+                      El corchete de cierre ] se puede utilizar fuera de una listacaracteres como carácter independiente pero no se puede
+                      utilizar en una listacaracteres. Por ejemplo, el patrón 'a]*' permite encontrar nombres que empiecen por una a seguida de un corchete de cierre.
+                      </p>
+                      </li>
+                  
+                      <li>
+                      <p>La secuencia de caracteres [] se considera una cadena de caracteres de longitud cero ("").</p>
+                      </li>
+                  
+                      <li>
+                      <p>
+                      Se puede especificar un intervalo de caracteres en ListaCaracteres colocando un guión - para separar los límites inferior y superior del intervalo.
+                      Por ejemplo, la secuencia [A-Z ] en patrón representa cualquier carácter comprendido en el intervalo de la A a la Z. 
+                      Cuando se especifica un intervalo de caracteres, éstos deben aparecer en orden ascendente (de menor a mayor).[A-Z] es un intervalo válido,
+                      pero [Z-A] no lo es. Se pueden incluir múltiples intervalos entre corchetes, sin necesidad de delimitadores. 
+                      El guión - define un intervalo únicamente cuando aparece dentro de los corchetes entre dos caracteres, en cualquier otro caso representa el carácter guión.
+                      </p>
+                      </li>
+                    
+                      <p>
+                      <b>Ejemplo</b>
+                       Por ejemplo queremos saber los alumnos de determinada provincia (son los que tienen un código postal
+                       que empieza por 46 seguido de tres dígitos cualesquiera, la condición podría ser [código postal] como '46###'
+                      </p>
+                      </ul>
+                  
+                  
+                  
+             
+              
+<!--               
+              <button class="respButton hvr-grow ">  Criterios para campos de texto, Memo e hipervínculo </button>
+              <div class="resp-box flexbox">
+              <div class="flexbox">    -->
+              <p>
+              Los ejemplos siguientes son para el campo Estado de una consulta que se basa en una tabla que almacena información de contactos. 
+              </p>
+              
+              <table class="tabla-funciones">
+                  <thead>
+                      <tr>
+                          <th colspan="2" style="font-size: 25px;"> <b>Criterios para campos de texto, Memo e hipervínculo</b></th>
+                         </tr>
+                    <tr>
+                      <th>Criterios</th>
+                      <th>Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      
+                   
+                   <!-- 
+                    <tr>
+                      <td class="nombre-funcion">
+                        <p>Is Null</p>
+                      </td>
+                      <td>
+                        <p>Este criterio se puede aplicar a cualquier tipo de campo para mostrar los registros en los que <b class="ocpLegacyBold">el valor del campo es NULL</b>. </p>
+                      </td>
+                    </tr> -->
+                    <tr>
+                      <td class="nombre-funcion">
+                          <p>"Oaxaca"</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el campo Estado tenga el valor Oaxaca.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                      <td class="nombre-funcion">
+                          <p>NoEs "Durango"</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el campo Estado tenga un valor distinto de Durango.</p>
+                        </td>
+                      
+                    </tr>
+                    <tr>
+                      <td class="nombre-funcion">
+                          <p>Como "U*"</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de todos los estados cuyos nombres empiecen por "C", como , Chiapas, etc. </p>
+                        </td>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td class="nombre-funcion">
+                          <p>NoEs como "D*"</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de todos los estados cuyos nombres empiezan por un carácter distinto de "D".</p>
+                        </td>
+                    </tr>
+                    <tr>
+                  <td>
+                      <p>Como "*Oaxaca*"</p>
+                  </td>
+                  <td>
+                    <p>Devuelvan registros de todos los estados que contengan la cadena "Oaxaca".</p>
+                  </td>
+                    </tr>
+                    <tr>
+                      <td class="nombre-funcion">
+                          <p>NoEs como "*Mexico*"</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de todos estados que no contengan la cadena "Mexico".</p>
+                        </td>
+                    </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                    <p>Como "*a"</p>
+                  </td>
+                  <td>
+                    <p>Devuelvan registros de todos los estados cuyos nombres acaben con "a", como Oaxaca y Puebla .</p>
+                  </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                      <p>NoEs como "*s"</p>
+                  </td>
+                  <td>
+                    <p>Devuelvan registros de todos los países o regiones cuyos nombres no acaben con "s", como Oaxaca y Chihuahua.</p>
+                  </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>Es Nulo</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que no hay ningún valor en el campo.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>No es Nulo</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan elementos en los que no falta el valor del campo.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                                <p>"" (un par de comillas)</p>
+                              </td>
+                              <td>
+                                <p>Devuelvan registros en los que el campo tiene un valor en blanco (pero no nulo). 
+                                  Por ejemplo, los registros de ventas realizadas a otro departamento podrían contener un valor 
+                                  en blanco en el campo Estado.</p>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>NoEs ""</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el campo Estado no tiene un valor en blanco.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>"" O Es Nulo</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que no hay ningún valor en el campo, o bien el campo tiene un valor en blanco.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>No es Nulo Y Sin ""</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el campo Estado tiene un valor no en blanco y no nulo.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>No es Nulo Y Sin ""</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el campo Estado tiene un valor no en blanco y no nulo.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>&gt;= "México"</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de todos los países o regiones a partir de México y posteriores por orden alfabético.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>Como "[A-D]*"</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de países o regiones cuyos nombres empiezan por las letras "A" a la "D".</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>"Durango" O "Zacatecas"</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros donde aparecen los  estados de Durango y Zacatecas.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>En("Chiapas", "Oaxaca", "Guerrero")</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de todos los estados especificados en la lista.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>Der([Estado], 1) = "y"</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de todos los estados cuya última letra sea "y".</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>Longitud([Estado]) &gt; 10</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de estados cuyo nombre esté formado por más de 10 caracteres.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>Como "Chi??"</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros países o regiones, como Chiapas  cuyos nombres tengan cinco caracteres y los primeros tres sean "Chi".</p>
+                      
+                        </td>
+                  </tr>
+                
+                </table>
+              
+              
+              
+              
+              <!-- <button class="respButton hvr-grow ">  Criterios para campos de número, moneda y autonuméricos </button>
+              <div class="resp-box flexbox">
+              <div class="flexbox">    -->
+              <p>
+              Los ejemplos siguientes son para el campo Precio_unitario de una consulta que se basa en una tabla que almacena información de productos.
+              El criterio se especifica en la fila Criterios del campo en la cuadrícula de diseño de la consulta.
+              </p>
+              <table class="tabla-funciones">
+                  <thead>
+                      <tr>
+                          <th colspan="2" style="font-size: 25px;"> <b>Criterios para campos de número, moneda y autonuméricos</b></th>
+                         </tr>
+                         <tr>
+                          <th style="width:200px">
+                            <p>
+                              <b class="ocpLegacyBold">Criterios</b>
+                            </p>
+                          </th>
+                         
+                          <th>
+                            <p>
+                              <b class="ocpLegacyBold">Descripción</b>
+                            </p>
+                          </th>
+                        </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>
+                            <p>&gt;25 y &lt;50</p>
+                          </td>
+                          <td>
+                            <p>Este criterio devuelve aquellos registros en los que el campo Precio_unitario contiene <b class="ocpLegacyBold">un valor superior a 25 y menor que 50</b>.</p>
+                          </td>
+                        </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>NoEs 1000</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el precio unitario del producto no es $1000 .</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>&lt; 100<br>&lt;= 100</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el precio unitario es menor que &#36;100  (&lt;100). La segunda expresión (&lt;=100) muestra los registros en los que el precio por unidad es menor o igual que &#36;100 .</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>&gt;99,99<br>&gt;=99,99</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el precio unitario es mayor que $99.99  (&gt;99.99). La segunda expresión muestra los registros en los que el precio por unidad es mayor o igual que 99.99 $.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>20 o 25</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el precio por unidad es $20  o $25.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>&gt;49,99 Y &lt;99,99<br>O bien,<br>Entre 50 Y 100</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el precio unitario está entre $49,99  y $99,99  (pero sin incluir estas cantidades).</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>&lt;50 O &gt;100</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el precio por unidad no está entre $50  y $100 .</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>En(20, 25, 30)</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el precio por unidad es $20 , $25  o $30 .</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>Como "*4,99"</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el precio por unidad acaba con "4.99", como $4.99 , $14.99, $24.99, etc.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>Is Null</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que no se ha especificado ningún valor en el campo PrecioUnidad.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>No es Nulo</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que no falta el valor del campo PrecioUnidad.</p>
+                        </td>
+                  </tr>
+              </tbody>
+              </table>
+              
+              
+              
+              <!-- <button class="respButton hvr-grow ">  Criterios para campos de fecha y hora </button>
+              <div class="resp-box flexbox">
+              <div class="flexbox">    -->
+              <p>
+              Los ejemplos siguientes son para el campo FechaPedido en una consulta basada en una tabla que almacena información de Pedidos. 
+              El criterio se especifica en la fila Criterios del campo en la cuadrícula de diseño de la consulta.
+              </p>
+              
+              <table class="tabla-funciones">
+                  <thead>
+                      <tr>
+                          <th colspan="2" style="font-size: 25px;"><b>Criterios para campos de número, moneda y autonuméricos</b></th>
+                         </tr>
+                         <tr>
+                          <th style="width:300px">
+                            <p>
+                              <b class="ocpLegacyBold">Criterios</b>
+                            </p>
+                          </th>
+                         
+                          <th>
+                            <p>
+                              <b class="ocpLegacyBold">Descripción</b>
+                            </p>
+                          </th>
+                        </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>
+                            <p>DifFecha ( "aaaa", [FechaPedido], Fecha()) &gt; 30</p>
+                          </td>
+                          <td>
+                            <p>Devuelve solo los registros en los que <b class="ocpLegacyBold">el número de años que transcurren entre la </b><b class="ocpLegacyBold">FechaPedido</b><b class="ocpLegacyBold"> y la fecha de hoy es mayor que 30</b> se incluyen en el resultado de la consulta. </p>
+                          </td>
+                        </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>#02/02/2006#</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de transacciones que tuvieron lugar el 2 de febrero de 2006. Recuerde rodear los valores de fecha con el carácter # para que Access pueda distinguir entre valores de fecha y cadenas de texto. </p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>No 1000</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que el precio unitario del producto no es $1000.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>No #02/02/2006#</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de transacciones que tuvieron lugar cualquier día menos el 2 de febrero de 2006.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>&lt; #02/02/2006#</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de transacciones que tuvieron lugar después del 2 de febrero de 2006.</p>
+                          <p>Si desea ver las transacciones que tuvieron lugar en esta fecha o antes de ella, use el operador <b class="ocpLegacyBold">&lt;=</b> en vez del operador <b class="ocpLegacyBold">&lt;</b>.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>&gt; #02/02/2006#</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de transacciones que tuvieron lugar antes del 2 de febrero de 2006.</p>
+                          <p>Si desea ver las transacciones que tuvieron lugar en esta fecha o después de ella, use el operador <b class="ocpLegacyBold">&gt;=</b> en vez del operador <b class="ocpLegacyBold">&gt;</b>.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>&gt;#02/02/2006# y &lt;#04/02/2006#</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan los registros en los que las transacciones tuvieron lugar entre el 2 de febrero de 2006 y el 4 de febrero de 2006.</p>
+                          <p>También puede usar el operador <b class="ocpLegacyBold">Entre</b> para filtrar según un intervalo de valores, incluidos los extremos. Por ejemplo, Entre #02/02/2006# y #04/02/2006# es lo mismo que &gt;=#02/02/2006# y &lt;=#04/02/2006#.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>&lt;#02/02/2006# o &gt;#04/02/2006#</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan los registros en los que las transacciones tuvieron lugar antes del 2 de febrero de 2006 o después del 4 de febrero de 2006.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>#02/02/2006# o #03/02/2006#</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de transacciones que tuvieron lugar el 2 de febrero de 2006 o el 3 de febrero de 2006.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>DatePart("m", [SalesDate]) = 12</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que las transacciones tuvieron lugar en diciembre de cualquier año.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>DatePart("q", [SalesDate]) = 1</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros en los que las transacciones tuvieron lugar en el primer trimestre de cualquier año.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>Fecha()</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de transacciones que tuvieron lugar el día actual. Si hoy es 02/02/2006, verá los registros en los que el campo FechaPedido esté definido en 2 de febrero de 2006.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>Fecha()-1</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de transacciones que tuvieron lugar el día anterior al día actual. Si hoy es 02/02/2006, verá los registros del 1 de febrero de 2006.</p>
+                        </td>
+                  </tr>
+                  <tr>
+                      <td class="nombre-funcion">
+                          <p>Date() + 1</p>
+                        </td>
+                        <td>
+                          <p>Devuelvan registros de transacciones que tuvieron lugar el día posterior al día actual. Si hoy es 02/02/2006, verá los registros del 3 de febrero de 2006.</p>
+                        </td>
+                  </tr>
+              
+              
+              
+              
+              
+              
+              
+                  <tr>
+                      
+                      <td>
+                        <p>DatePart("ww", [SalesDate]) = DatePart("ww", Date()) and Year( [SalesDate]) = Year(Date())</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros de transacciones que tuvieron lugar durante la semana actual. La semana empieza el domingo y acaba el sábado.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      
+                      <td>
+                        <p>Year([SalesDate])* 53 + DatePart("ww", [SalesDate]) = Year(Date())* 53 + DatePart("ww", Date()) - 1 </p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros de transacciones que tuvieron lugar durante la semana pasada. La semana empieza el domingo y acaba el sábado.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                     
+                      <td>
+                        <p>Year([SalesDate])* 53+DatePart("ww", [SalesDate]) = Year(Date())* 53+DatePart("ww", Date()) + 1 </p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros de transacciones que tendrán lugar la semana siguiente. La semana empieza el domingo y acaba el sábado.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                     
+                      <td>
+                        <p>Between Date() and Date()-6</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros de transacciones que tuvieron lugar durante los últimos 7 días. Si hoy es el 02/02/2006, verá los registros correspondientes al intervalo comprendido entre el 24 de enero de 2006 y el 2 de febrero de 2006.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                     
+                      <td>
+                        <p>Year([SalesDate]) = Year(Now()) And Month([SalesDate]) = Month(Now())</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros del mes actual. Si hoy es 02/02/2006, verá los registros de febrero de 2006.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                     
+                      <td>
+                        <p>Year([SalesDate])* 12 + DatePart("m", [SalesDate]) = Year(Date())* 12 + DatePart("m", Date()) - 1</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros del mes anterior. Si hoy es 02/02/2006, verá los registros de enero de 2006.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                     
+                      <td>
+                        <p>Year([SalesDate])* 12 + DatePart("m", [SalesDate]) = Year(Date())* 12 + DatePart("m", Date()) + 1</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros del mes siguiente. Si hoy es 02/02/2006, verá los registros de marzo de 2006.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                     
+                      <td>
+                        <p>Between Date( ) And DateAdd("M", -1, Date( ))</p>
+                      </td>
+                      <td>
+                        <p>Registros de ventas de un mes. Si hoy es 02/02/2006, verá los registros del período entre el 2 de enero de 2006. y el 2 de febrero de 2006</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      
+                      <td>
+                        <p>Year([SalesDate]) = Year(Now()) And DatePart("q", Date()) = DatePart("q", Now())</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros del trimestre en curso. Si hoy es 02/02/2006, verá los registros correspondientes al primer trimestre de 2006.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                              <td>
+                        <p>Year([SalesDate])*4+DatePart("q",[SalesDate]) = Year(Date())*4+DatePart("q",Date())- 1</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros del trimestre anterior. Si hoy es 02/02/2006, verá los registros correspondientes al último trimestre de 2005.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                     
+                      <td>
+                        <p>Year([SalesDate])*4+DatePart("q",[SalesDate]) = Year(Date())*4+DatePart("q",Date())+1</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros del trimestre siguiente. Si hoy es 02/02/2006, verá los registros correspondientes al segundo trimestre de 2006.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                     
+                      <td>
+                        <p>Year([SalesDate]) = Year(Date())</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros del año en curso. Si hoy es 02/02/2006, verá los registros del año 2006.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="nombre-funcion">
+                        <p>Year([SalesDate]) = Year(Date()) - 1</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros de transacciones que tuvieron lugar durante el año pasado. Si hoy es 02/02/2006, verá los registros del año 2005.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                    
+                      <td>
+                        <p>Year([SalesDate]) = Year(Date()) + 1</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros de transacciones con fecha del año siguiente. Si hoy es 02/02/2006, verá los registros del año 2007.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      
+                      <td>
+                        <p>Year([SalesDate]) = Year(Date()) and Month([SalesDate]) &lt;= Month(Date()) and Day([SalesDate]) &lt;= Day (Date())</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros de transacciones fechados entre el 1 de enero del año en curso y hoy. Si hoy es 02/02/2006, verá los registros del período entre el 1 de enero de 2006 y el 02/02/2006.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                    
+                      <td>
+                        <p>&lt; Date()</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros de transacciones que tengan lugar después de hoy.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                     
+                      <td>
+                        <p>&gt; Date()</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros de transacciones que tendrán lugar después de hoy.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                     
+                      <td>
+                        <p>Is Null</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros en los que falte la fecha de la transacción.</p>
+                      </td>
+                    </tr>
+                    <tr>
+                     
+                      <td>
+                        <p>Is Not Null</p>
+                      </td>
+                      <td>
+                        <p>Devuelvan registros en los que se conozca la fecha de la transacción.</p>
+                      </td>
+                    </tr>
+              
+              
+              
+              
+                  
+                  </tbody>
+              </table>
+              
+             
+              
+<!--               
+              
+              <button class="respButton hvr-grow "> Consultas con parámetros </button>
+              <div class="resp-box flexbox">
+              <div class="flexbox">    -->
+              
+              
+              <h2 class="number-title">Consultas con parámetros.</h2>
+              
+              <p>
+               A menudo, en una consulta necesitamos utilizar un valor que no es conocido en ese momento sino que queremos que lo
+               introduzca el usuario cuando se ejecute la consulta. 
+              </p>
+              
+              <p>
+               En este caso necesitamos utilizar en nuestra consulta un parámetro. Un parámetro funciona de forma parecida 
+               a un campo de tabla, pero el valor que almacena lo introduce el usuario cuando se ejecuta la consulta.
+              </p>
+              <p>
+               En una consulta cuando utilizamos un nombre de campo que no está en el origen de datos, Access considera este campo como un parámetro y cuando se ejecuta la consulta nos pide Introducir el valor del parámetro mediante un cuadro de diálogo
+              </p>
+              
+              <p>
+               <b>Observacion</b> Cuando pongamos el nombre del parámetro es importante escribirlo entre corchetes,
+               de lo contrario Access le añadirá comillas y no lo considerará como un nombre de parámetro sino como un valor.
+              </p>
+              
+              
+              <p>
+               Otra forma de utilizar un parámetro en una consulta es definiéndolo mediante el botón Parámetros de la pestaña Diseño.
+               La diferencia entre escribir directamente un nombre de parámetro y definirlo con el botón Parámetros es que, 
+               si le hemos asignado un tipo de dato, Access comprueba automáticamente el tipo del valor introducido por el usuario.
+              </p>
+              
+              
+              
+              
+              
+              
+              
+              <button class="respButton hvr-grow "> Función DifFecha </button>
+              <div class="resp-box flexbox">
+              <div class="flexbox">   
+              
+              
+              <h3> Función DifFecha</h3>
+              
+              <p>
+                
+              La función DifFecha nos permite calcular el número de intervalos de tiempo transcurridos entre dos fechas especificadas. 
+              Este intervalo de tiempo pueden ser días, meses, semanas, años, etc. Lo importante a la hora de utilizar
+              la función DifFecha es indicar el intervalo adecuado.
+              La sintaxis de la función tiene 5 argumentos: los tres primeros son obligatorios y los dos últimos son opcionales.
+              
+              <center> <b>DifFecha (“intervalo”;[fecha 1];[fecha 2];primer_día_semana; primera_semana_año)</b></center></p>
+              
+              
+              <table class="banded">
+                <thead>
+                  <tr>
+                    <td>
+                      <p>argumento</p>
+                    </td>
+                    <td>
+                      <p>Descripción</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>
+                        <i class="ocpItalic">intervalo</i>
+                      </p>
+                    </td>
+                    <td>
+                      <p>Obligatorio. Expresión de cadena que es el intervalo de tiempo que se usa para calcular la diferencia entre <b class="ocpLegacyBold"><i class="ocpItalic">fecha1</i></b> y <b class="ocpLegacyBold"><i class="ocpItalic">fecha2.</i></b></p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>
+                        <i class="ocpItalic">fecha1</i>, <i class="ocpItalic">fecha2</i></p>
+                    </td>
+                    <td>
+                      <p>Obligatorio. <b class="ocpLegacyBold">Variant</b> (<b class="ocpLegacyBold">Fecha</b>). Dos fechas que se desea utilizar en el cálculo.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>
+                        <i class="ocpItalic">primer_día_semana</i>
+                      </p>
+                    </td>
+                    <td>
+                      <p>Opcional. Un constante que especifica el primer día de la semana. Si no se especifica ningún valor, se supone que es el domingo.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>
+                        <i class="ocpItalic">primera_semana_año</i>
+                      </p>
+                    </td>
+                    <td>
+                      <p>Opcional. Una constante que especifica la primera semana del año. Si no se especifica, se entiende que la primera semana es aquella que contiene el día 1 de enero.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <h3>Configuración</h3>
+              
+              
+              <table class="banded">
+                <thead>
+                  <tr>
+                    <td>
+                      <p>Configuración</p>
+                    </td>
+                    <td>
+                      <p>Descripción</p>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>yyyy</p>
+                    </td>
+                    <td>
+                      <p>Año</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>q</p>
+                    </td>
+                    <td>
+                      <p>Trimestre</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>m</p>
+                    </td>
+                    <td>
+                      <p>Mes</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>y</p>
+                    </td>
+                    <td>
+                      <p>Día del año</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>d</p>
+                    </td>
+                    <td>
+                      <p>Día</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>w</p>
+                    </td>
+                    <td>
+                      <p>Weekday</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>ww</p>
+                    </td>
+                    <td>
+                      <p>Semana</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>h</p>
+                    </td>
+                    <td>
+                      <p>Hora</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>n</p>
+                    </td>
+                    <td>
+                      <p>Minuto</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>s</p>
+                    </td>
+                    <td>
+                      <p>Segundo</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              
+              <p>
+                El intervalo es el primer argumento de la función, hemos de escribirlo entre comillas,
+                pudiendo disponer de los siguientes intervalos:
+                <ul>
+                  <li>“a” años</li>
+                  <li>“d” días</li>
+              <li>“w” día de la semana (por ejemplo miércoles transcurridos entre las dos fechas)</li>
+              <li>“ww” semanas</li>
+              <li>“m” meses</li>
+              <li>“q” trimestres</li>
+              <li>“y” días del año (transcurridos entre dos fechas, es lo mismo que especificar d)</li>
+              <li>“yyyy” años</li>
+              <li>“h” horas</li>
+              <li>“n” minutos</li>
+              <li>“s” segundos</li>
+                  </li>
+                </ul>
+              </p>
+              
+              <p> Fecha 1 y Fecha 2 son las fechas entre las cuales queremos calcular el intervalo.</p>
+              
+              <p><b>Ejemplo:</b> Tenemos una tabla de pedidos, y queremos saber cuantos días han transcurrido 
+                entre la fecha de pedido y la fecha de entrega. Creamos una consulta en la que utilizamos la función DifFecha 
+                con la siguiente expresión:
+              
+              <center><b>Días transcurridos:DifFecha("d";[Fecha_Pedido];[Fecha_Entrega])</b></center>
+              
+              
+              </p>
+              
+              <p><b>ARGUMENTOS OPCIONALES:</b></p>
+              
+              <p>
+                Primer día de la semana, es una constante numérica, por defecto es 1, y corresponde al domingo, 
+                ya que se rige por el calendario anglosajón, cuyas semanas comienzan en domingo. Si queremos especificar 
+                que el primer día de la semana es el lunes escribiríamos un 2).
+              </p>
+              
+              
+              
+              
+              <p>
+                Primera semana, en este argumento se indica cual es la primera semana del año. Si no es especificamos nada, 
+                Access toma como primera semana del año la semana del 1 de enero.
+              </p>
+              
+              
+              
+              
+              </div>
+              </div>
+              
+              
+              
+              
+              
+              <button class="respButton hvr-grow ">  Consulta de Totales </button>
+              <div class="resp-box flexbox">
+              <div class="flexbox">   
+              <p>Para calcular los totales dentro de una consulta, pulsa el botón Totales de la barra de herramientas en Vista Diseño para abrir la fila Total en la cuadrícula de diseño.</p>
+              
+              <h3>Totales dentro de grupos</h3>
+              <p>
+                La primera vez que pulsemos el botón Totales en la barra de herramientas, Access visualiza Agrupar
+                por en la fila Total de todos los campos que se encuentren en la cuadrícula de diseño.
+                En este momento, los registros de cada campo estarán agrupados pero NO totalizados.
+                Podemos crear totales reemplazando el ajuste Agrupar por con algunas funciones de totales en la fila Total.
+              </p>  
+              
+              <p>Access proporciona hasta nueve funciones de totales diferentes:</p>
+              
+              <table>
+                <tbody>
+                <tr>
+                <td width="14%" valign="top"><em>Suma&nbsp;</em></td>
+                <td width="86%" valign="top">Calcula la <em>suma</em> de todos los valores de este campo en cada grupo. S&oacute;lo podemos especificar esta funci&oacute;n en columnas de campos num&eacute;ricos o de moneda&nbsp;</td>
+                </tr>
+                <tr>
+                <td width="14%" valign="top"><em>Promedio&nbsp;</em></td>
+                <td width="86%" valign="top">Calcula la <em>media aritm&eacute;tica</em> de todos los valores de este campo en cada grupo. S&oacute;lo podemos especificar esta funci&oacute;n en columnas de campos num&eacute;ricos o de moneda. <strong>Access</strong> no incluye los valores nulos en el c&aacute;lculo&nbsp;</td>
+                </tr>
+                <tr>
+                <td width="14%" valign="top"><em>M&iacute;n&nbsp;</em></td>
+                <td width="86%" valign="top">Da por resultado el <em>m&iacute;nimo</em> valor encontrado en esta columna dentro de cada grupo. Para valores num&eacute;ricos, devuelve el valor m&aacute;s peque&ntilde;o. Para valores de texto, devuelve el valor m&aacute;s peque&ntilde;o en la secuencia recogida, sin tener en cuenta las may&uacute;sculas o min&uacute;sculas. <strong>Access</strong> ignora los valores nulos&nbsp;</td>
+                </tr>
+                <tr>
+                <td width="14%" valign="top"><em>M&aacute;x&nbsp;</em></td>
+                <td width="86%" valign="top">Da por resultado el <em>mayor</em> valor encontrado en esta columna dentro de cada grupo. Para valores num&eacute;ricos, devuelve el valor mayor. Para valores de texto, devuelve el valor m&aacute;s alto en la secuencia recogida, sin tener en cuenta las may&uacute;sculas o min&uacute;sculas. <strong>Access</strong> ignora los valores nulos&nbsp;</td>
+                </tr>
+                <tr>
+                <td width="14%" valign="top"><em>Cuenta&nbsp;</em></td>
+                <td width="86%" valign="top">Da por resultado el <em>n&uacute;mero de filas</em> en las que el campo especificado no posee un valor nulo. Tambi&eacute;n podemos introducir la expresi&oacute;n <em>Cuenta(*) </em>en la fila Campo para contar todas las filas de cada grupo, independientemente de la existencia de valores nulos&nbsp;</td>
+                </tr>
+                <tr>
+                <td width="14%" valign="top"><em>DesVest&nbsp;</em></td>
+                <td width="86%" valign="top">Calcula la <em>desviaci&oacute;n t&iacute;pica </em>de todos los valores de este campo en cada grupo. S&oacute;lo podemos especificar esta funci&oacute;n en columnas de campos num&eacute;ricos o de moneda. Si el grupo no contiene al menos dos filas, <strong>Access</strong> devuelve un valor nulo&nbsp;</td>
+                </tr>
+                <tr>
+                <td width="14%" valign="top"><em>Var&nbsp;</em></td>
+                <td width="86%" valign="top">Calcula la <em>varianza</em> de todos los valores de este campo en cada grupo. S&oacute;lo podemos especificar esta funci&oacute;n en columnas de campos num&eacute;ricos o de moneda. Si el grupo no contiene al menos dos filas, <strong>Access</strong> devuelve un valor nulo&nbsp;</td>
+                </tr>
+                <tr>
+                <td width="14%" valign="top"><em>Primero&nbsp;</em></td>
+                <td width="86%" valign="top">Devuelve el <em>primer</em> valor de este campo&nbsp;</td>
+                </tr>
+                <tr>
+                <td width="14%" valign="top"><em>&Uacute;ltimo&nbsp;</em></td>
+                <td width="86%" valign="top">Devuelve el <em>&uacute;ltimo</em> valor de este campo&nbsp;</td>
+                </tr>
+                </tbody>
+                </table>
+                En la lista desplegable de la fila Total de la cuadrícula, también podemos encontrar un parámetro llamado Expresión. Elija este parámetro cuando desees crear una expresión en la fila Campo que utilice alguna de las funciones de totales listadas anteriormente.
+              </div>
+              </div>
+              
+              
+              
+              
+              <button class="respButton hvr-grow "> Funciones (organizadas por categoría) </button>
+              <div class="resp-box flexbox">
+              <div class="flexbox">   
+              
+                <p>
+                <a href="https://support.microsoft.com/es-es/office/funciones-organizadas-por-categor%C3%ADa-b8b136c3-2716-4d39-94a2-658ce330ed83
+                ">Funciones comunes que se usan en expresiones de Microsoft Access.</a>.
+                </p>
+              
+              
+             
+
+
+ 
+    </div>
+
+</body>
