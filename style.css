@@ -137,8 +137,9 @@ width: 100%;
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
-  margin-bottom: 0%;
-  margin-top: 0%;
+  /* margin-bottom: 0%; */
+  margin-top: -7.5%;
+  /* height: 0%; */
   }
 
  
@@ -149,7 +150,9 @@ width: 100%;
 .top-nav{
 text-align:center; 
 padding: 1%;
-width: 100%;
+width: auto;
+
+/* height: 2%; */
 }
 
 .top-nav ul {
