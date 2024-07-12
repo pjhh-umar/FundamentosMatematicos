@@ -144,7 +144,6 @@ width: 100%;
   /* margin-top: -7.5%; */
   }
 
-
  
 .small-nav{
     padding:10px;
@@ -153,7 +152,9 @@ width: 100%;
 .top-nav{
 text-align:center; 
 padding: 1%;
-width: 100%;
+width: auto;
+
+/* height: 2%; */
 }
 
 .top-nav ul {
