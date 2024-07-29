@@ -47,17 +47,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
 
 html, body{
-  margin-top: 4%;
-  /* margin: 2%; */
+  margin-top: 0.25%;
   font-family: "Bitter", serif;
   font-optical-sizing: auto;
   line-height: 1.5em;
   font-weight: 400;
   font-style: normal;
-  justify-content: center;
-  align-items: center;
-  align-content: center; 
-  /* height: 100vh; /* */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* align-content: center;  */
+  /* height: auto;  */
   /*"Quicksand";    */
   /* font-family: 'Noto Serif Tangut', serif; */
   /* font-family: 'GFS Neohellenic', sans-serif; */
@@ -81,6 +80,10 @@ html, body{
   /* font-size: 105%; */
 }
 
+/* 
+html, head{
+  margin-top: auto;
+} */
 .fondo-body{
   /* background:  rgb(255, 255, 255); */
   background: rgb(252, 252, 244);
@@ -137,9 +140,8 @@ width: 100%;
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
-  /* margin-bottom: 0%; */
-  margin-top: -7.5%;
-  /* height: 0%; */
+  margin-bottom: 0%;
+  /* margin-top: -7.5%; */
   }
 
  
@@ -232,7 +234,7 @@ width: auto;
   /* font-family: 'Caprasimo', cursive; */
   /* font-family: 'Mate SC', serif; */
   margin-top: 0%;
-  margin-bottom: 1.25%;
+  margin-bottom: 0.25%;
   padding: 0%;
   /* color:  rgb(0, 46, 145); */
   color: rgb(184,134,11); 
