@@ -1351,7 +1351,7 @@ tbody tr:nth-child(odd) {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 600px) 
   th, td {
       font-size: 14px;
   }
