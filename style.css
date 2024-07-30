@@ -50,10 +50,10 @@ html, body{
   margin-top: 0.25%;
   font-family: "Bitter", serif;
   font-optical-sizing: auto;
-  line-height: 1.5em;
+  line-height: 1.4em;
   font-weight: 400;
   font-size: 115%;
-  /* font-style: normal; */
+  font-style: normal;
   /*"Quicksand";    */
   /* font-family: 'Noto Serif Tangut', serif; */
   /* font-family: 'GFS Neohellenic', sans-serif; */
@@ -1384,8 +1384,8 @@ ol li::marker{
   counter-increment: listaCounter;
   /* font-weight: bold; */
   /*counter-reset: sublistaCounter; */
-  padding: 1.25px;
-  /* font-size: 20px; */
+  /* padding: 1.1px; */
+  /* font-size: 100%; */
 } 
 
 
