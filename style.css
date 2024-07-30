@@ -488,9 +488,9 @@ h1.page-title{
   font-family: 'Gelasio', serif;
   /* font-family: 'IM Fell English', serif; */
   /* content:" "; */
-  margin-top: 0%;
-  margin-bottom: 0%;
-  padding: 2%;
+  margin-top: 1%;
+  margin-bottom: 0.25%;
+  padding: 0%;
   width: 100%;
   /* color: rgba(255, 0, 0, 0.789); */
   /* color:  rgb(0,0,128);  */
@@ -505,8 +505,8 @@ h1.page-number-title{
   font-family: 'Gelasio', serif;
   /* font-family: 'IM Fell English', serif; */
   /* content:" "; */
-  margin-top: 0%;
-  margin-bottom: 3%;
+  margin-top: 1%;
+  margin-bottom: 2%;
   padding: 0%;
   width: 100%;
   /* color: rgba(255, 0, 0, 0.789); */
@@ -514,7 +514,6 @@ h1.page-number-title{
   color: rgb(184,134,11); 
   /* font-weight: 500; */
 }
-
 h1.page-number-title::before{
   font-size: normal;
   counter-increment: temaCounter; 
