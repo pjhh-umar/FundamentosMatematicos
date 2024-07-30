@@ -331,9 +331,9 @@ width: auto;
 
 
 h1.title{
-  font-size: 220%;
+  font-size: 190%;
   font-weight: 600;
-  margin-top: -1%;
+  margin-top: 0%;
   margin-bottom: 3.5%;
   padding: 0%;
   content:" ";
@@ -355,7 +355,7 @@ h1.title{
 }
 
 h2.title{
-  font-size: 200%;
+  font-size: 180%;
   font-weight: 600;
   /* padding: 2%; */
   /* font-family: "Muli"; */
@@ -482,7 +482,7 @@ body.card{
           }
 
 h1.page-title{
-  font-size: 205%;
+  font-size: 160%;
   text-align: center;
   /* font-family: "Muli"; */
   font-family: 'Gelasio', serif;
@@ -541,7 +541,7 @@ h1.page-subtitle{
 }
 
 h1.tema-title{
-  font-size: 240%;
+  font-size: 210%;
   text-align: center;
   /* font-family: "Muli"; */
   font-family: 'Gelasio', serif;
@@ -747,7 +747,7 @@ h1.number-title-practica::after{
     padding: 10px;
     border: 0px solid  rgb(218,165,32);
     margin: auto; 
-    /* margin-top: 50px; */
+    margin-top: 50px;
     font-size: 25px;
     width: 85%;
     box-shadow: 0px 0px 10px 0px  rgb(218,165,32);
@@ -843,7 +843,7 @@ h1.number-title-practica::after{
     color: black;
     border-radius: 20px;
     /* padding: 5%; */
-    padding: 20px;
+    padding: 25px;
     border: 0px solid  rgb(218,165,32);
     margin: auto;
     margin-bottom: 50px;
