@@ -1350,6 +1350,11 @@ tbody tr:nth-child(odd) {
       font-size: 14px;
   }
 
+.four-column{
+  columns: 4;
+  /*grid-template-columns: repeat(2, 1fr);*/
+}
+
 
 .three-column{
   columns: 3;
