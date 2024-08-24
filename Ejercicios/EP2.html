@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html PUBLIC >
 
 <html lang="es">
@@ -7,12 +8,15 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
     <!-- This part is for jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- This part is to load main.js -->
     <script type="text/javascript" src="../main.js"></script>
+
+
+    
+
 
     <!-- Next part is for new coomands -->
     <script>
@@ -32,14 +36,31 @@
     
     <!-- This part restart counter of cards to start at n+1 -->
     <style>
-      /* body.number-title{
-        counter-reset: temaCounter 1 subsectioncounter ;
+      /* body.number-title
+      {
+      counter-reset: temaCounter 1 subsectioncounter ;
       } */
-      h1.page-title-practica{
-        counter-reset:  sectionCounter 0 sectionCounter  subsectionCounter;
+      body.fondo-body{
+        counter-reset: temaCounter 1 sectionCounter;
       }
-    </style>
 
+      /* h1.page-number-title
+      {
+      counter-reset: sectionCounter 0;
+      }  */
+
+      h1.tema-number-title
+          {
+          counter-reset: sectionCounter 1;
+          } 
+
+      h1.number-title
+      {
+      counter-reset: subsectionCounter;
+      /* counter-reset: subsectionCounter; */
+      }
+
+    </style>
     <!-- CSS -->
 
     <link rel="stylesheet" , href="../style.css" />
@@ -59,7 +80,7 @@
       
           </div>
           <div class="logo_superior_umar">
-            <a href="https://www.umar.mx" target="_blank"><img src="./Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+            <a href="https://www.umar.mx" target="_blank"><img src="../Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
           </div>
 
       
@@ -91,32 +112,173 @@
 
 
 
-  <body class="fondo-body" ><h1 class="page-title"> Archivos segundo examen parcial  </h1>   
+      <body class="fondo-body" ><h1 class="page-title-practica"> Prácticas Segundo Examen Parcial </h1>   
 
-    <!-- <div class="nota-box"><h1 class="title"> Archivos</h1> -->
+    <!-- <div class="nota-box"><h1 class="title"> Archivos</h1> 
       <div class="links-box" style = "font-family: 'Oldenburg', cursive; font-size: 150%;">
-        <!-- <a href="../Archivos/EP2.pdf" download> Indicaciones</a> -->
-        <a href="../Archivos/EP2-GrupoA_.xlsx" download> EP2-GrupoA_.xlsx</a><br><br>
-        <a href="../Archivos/EP2-GrupoB.xlsx" download> EP2-GrupoB.xlsx</a><br><br>
-        <a href="../Archivos/EP2-GrupoC_.xlsx" download> EP2-GrupoC.xlsx</a>
-        
-        <!-- <a href="../Archivos/EP1-GrupoB.xlsx" download> EP1-GrupoB.xlsx</a><br> -->
-        <!-- <a href="../Archivos/EP1-GrupoC.xlsx" download> EP1-GrupoC.xlsx</a> -->
+        <a href="../Archivos/EP1-GrupoA.xlsx" download> EP1-GrupoA.xlsx</a><br>
+        <a href="../Archivos/EP1-GrupoC.xlsx" download> EP1-GrupoC.xlsx</a>
       </div>
-      
-    <!-- </div> -->
+      </div> -->
     
         
 
 
-    <!-- <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-      <p></p>
-    </div>
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1>
+        <p>Para cada uno de los siguientes ejercicios utiliza la definición de la derivada para encontrar la 
+          derivada de la función.</p>
+        <ol class="two-column">
+          <li>\(\displaystyle f'(x) \quad \text{si} \quad f(x) = x\)</li><br>
+          <li>\(\displaystyle \frac{dy}{dx} \quad \text{si} \quad y = 3x + 5\)</li><br>
+          <li>\(\displaystyle f'(x) \quad \text{si} \quad f(x) = 4x - 1\)</li><br>
+          <li>\(\displaystyle \frac{dy}{dx} \quad \text{si} \quad y = -5x\)</li><br>
+          <li>\(\displaystyle H'(x) \quad \text{si} \quad H(x) = \frac{1}{x-2}\)</li><br>
+          <li>\(\displaystyle \frac{d}{dx} (5 - 4x)\)</li><br>
+          <li>\(\displaystyle f'(x) \quad \text{si} \quad f(x) = 3\)</li><br>
+          <li>\(\displaystyle \frac{d}{dx} (x^2 + 4x - 8)\)</li><br>
+          <li>\(\displaystyle \frac{dp}{dq} \quad \text{si} \quad p = 3q^2 + 2q + 1\)</li><br>
+          <li>\(\displaystyle \frac{d}{dx} (x^2 - x - 3)\)</li><br>
+          <li>\(\displaystyle \frac{dC}{dq} \quad \text{si} \quad C = 7 + 2q - 3q^2\)</li><br>
+          <li>\(\displaystyle f'(x) \quad \text{si} \quad f(x) = \sqrt{x+2}\)</li><br>
+          <li>\(\displaystyle \frac{d}{dx} \left(1 - \frac{x}{2}\right)\)</li><br>
+          <li>\(\displaystyle f'(x) \quad \text{si} \quad f(x) = 7.01\)</li><br>
+          <li>\(\displaystyle y' \quad \text{si} \quad y = x^2 + 5x + 1\)</li><br>
+          <li>\(\displaystyle y' \quad \text{si} \quad y = \frac{6}{x}\)</li><br>
+          <li>\(\displaystyle H'(x) \quad \text{si} \quad H(x) = \frac{3}{x-2}\)</li>
+        </ol>
+        </p>
+      </div>
 
-    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-      <p></p>
+      
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1>
+        <p></p>
+        <p>
+          <ol class="one-column">
+        <li>Encuentre la pendiente de la recta tangente a la gráfica de la función \(y = x^2 + 4\) en el punto \((-2, 8)\).</li><br>
+        <li>Encuentre la pendiente de la recta tangente a la gráfica de la función  \(y = 1 - x^2\) en el punto \((1, 0)\).</li><br>
+        <li>Encuentre la pendiente de la recta tangente a la gráfica de la función  \(y = 4x^2 - 5\) cuando \(x = 0\).</li><br>
+        <li>Encuentre la pendiente de la recta tangente a la gráfica de la función  \(y = \sqrt{x}\) cuando \(x = 1\).</li><br>
+          </ol>
+        </p>
+      </div>
 
-      <p><b>Sugerencia:</b> </p>
-    </div> -->
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1>
+        <p>Para cada uno de los siguientes ejercicios:
+          <hr width="100%">
+          <ol>
+            <li>Determine la derivada de $f$ utilizando las reglas de derivación</li><br>
+            <li>Calcule la pendiente cuando $x = 1$ y $x = - 2$.</li>
+          </ol></p>
+          <hr width="100%">
+        <p>
+          <ol class="two-column">
+            <li>\(\displaystyle f(x) = 4x + 6\)</li><br>
+        <li>\(\displaystyle f(x) = -20\)</li><br>
+        <li>\(\displaystyle f(x) = 8x^2\)</li><br>
+        <li>\(\displaystyle f(x) = 5x^2\)</li><br>
+        <li>\(\displaystyle f(x) = 3x^2 - 5x\)</li><br>
+        <li>\(\displaystyle f(x) = 10x^2 - 8x\)</li><br>
+        <li>\(\displaystyle f(x) = x^2 - 3x + 5\)</li><br>
+        <li>\(\displaystyle f(x) = 15x^2 + 2x + 8\)</li><br>
+        <li>\(\displaystyle f(x) = -6x^2 + 3x - 1\)</li><br>
+        <li>\(\displaystyle f(x) = 3x^2 - 10x\)</li><br>
+        <li>\(\displaystyle f(x) = 20x^2 - 10\)</li><br>
+        <li>\(\displaystyle f(x) = \frac{x^2}{2} + 6x\)</li><br>
+        <li>\(\displaystyle f(x) = ax + b\)</li><br>
+        <li>\(\displaystyle f(x) = -ax^2 + bx\)</li><br>
+        <li>\(\displaystyle f(x) = -2/x\)</li><br>
+        <li>\(\displaystyle f(x) = 4/x\)</li><br>
+        <li>\(\displaystyle f(x) = 4/x^2\)</li><br>
+        <li>\(\displaystyle f(x) = 5/x^2\)</li><br>
+        <li>\(\displaystyle f(x) = 3/x\)</li><br>
+        <li>\(\displaystyle f(x) = 3/x^3\)</li><br>
+        <li>\(\displaystyle f(x) = 3x^{1/2}\)</li><br>
+        <li>\(\displaystyle f(x) = 4/x^2\)</li><br>
+        <li>\(\displaystyle f(x) = x^3 + 3x^2\)</li><br>
+        <li>\(\displaystyle f(x) = x^4\)</li>
+          </ol>
+        </p>
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Ejercicio</h1>
+        <p>Calcula la derivada de las siguientes funciones. Menciona claramente la(s) regla(s) utilizadas.</p>
+        <p>
+          <ol class="two-column"> 
+            <li>\(\displaystyle f(x) = 5\)</li><br>
+        <li>\(\displaystyle f(x) = \left(\frac{6}{7}\right)^{2/3}\)</li><br>
+        <li>\(\displaystyle y = x^6\)</li><br>
+        <li>\(\displaystyle f(x) = x^{21}\)</li><br>
+        <li>\(\displaystyle y = x^{80}\)</li><br>
+        <li>\(\displaystyle y = x^{5.3}\)</li><br>
+        <li>\(\displaystyle f(x) = 9x^2\)</li><br>
+        <li>\(\displaystyle y = 4x^3\)</li><br>
+        <li>\(\displaystyle g(w) = 8w^7\)</li><br>
+        <li>\(\displaystyle y = x^e\)</li><br>
+        <li>\(\displaystyle \frac{3x^4}{2}\)</li><br>
+        <li>\(\displaystyle f(p) = \sqrt{3p^4}\)</li><br>
+        <li>\(\displaystyle f(t) = \frac{t^7}{25}\)</li><br>
+        <li>\(\displaystyle y = \frac{x^7}{7}\)</li><br>
+        <li>\(\displaystyle f(x) = 3x - 2\)</li><br>
+        <li>\(\displaystyle f(x) = x + 3\)</li><br>
+        <li>\(\displaystyle F(x) = 5x^2 - 9x\)</li><br>
+        <li>\(\displaystyle f(y) = 4x^2 - 2x + 3\)</li><br>
+        <li>\(\displaystyle f(t) = t^{13} + 14t + 1\)</li><br>
+        <li>\(\displaystyle g(p) = p^4 - 3p^3 - 1\)</li><br>
+        <li>\(\displaystyle y = 3x^3 - \sqrt{6}\)</li><br>
+        <li>\(\displaystyle y = 8x^4 + \ln 2\)</li><br>
+        <li>\(\displaystyle y = x^3 - 3\)</li><br>
+        <li>\(\displaystyle f(x) = 13x^3 + 14x^2 - 2x + 3\)</li><br>
+        <li>\(\displaystyle V(r) = r^8 - 7r^6 + 3r^2 + 1\)</li><br>
+        <li>\(\displaystyle \phi(t) = 5(t^3 - 3t^2)\)</li><br>
+        <li>\(\displaystyle f(x) = 5(x^4 - 6)\)</li><br>
+        <li>\(\displaystyle f(x) = \frac{3x^4}{10} + 7x^3\)</li><br>
+        <li>\(\displaystyle f(x) = \frac{t}{25}\)</li><br>
+        <li>\(\displaystyle h(x) = 4x^4 + \frac{9x^2}{2} + 8x\)</li><br>
+        <li>\(\displaystyle k(x) = 2x^2 + \frac{5}{3}x + 11\)</li><br>
+        <li>\(\displaystyle f(x) = \frac{3x^4}{10} + 7x^3\)</li><br>
+        <li>\(\displaystyle p(x) = \frac{x^7}{7} + \frac{2x}{3}\)</li><br>
+        <li>\(\displaystyle f(x) = x^{3/5}\)</li><br>
+        <li>\(\displaystyle f(x) = 2x - \frac{14x^5}{5}\)</li><br>
+        <li>\(\displaystyle y = x^{3/4} + 2x^{5/3}\)</li><br>
+        <li>\(\displaystyle f(x) = 5x^3 - x^{2/5}\)</li><br>
+        <li>\(\displaystyle f(x) = 4\sqrt{7x}\)</li><br>
+        <li>\(\displaystyle f(x) = 6\sqrt[7]{7}\)</li><br>
+        <li>\(\displaystyle y = x^{4}\)</li><br>
+        <li>\(\displaystyle g(x) = \frac{3}{7}\)</li><br>
+        <li>\(\displaystyle f(x) = 3x^2 + 5x\)</li><br>
+        <li>\(\displaystyle g(x) = \frac{1}{\sqrt{x}}\)</li><br>
+        <li>\(\displaystyle f(x) = x^5 - 2x^6\)</li><br>
+        <li>\(\displaystyle f(x) = 100x^{-3} + 10x^{1/2}\)</li><br>
+        <li>\(\displaystyle y = \frac{1}{x^3}\)</li><br>
+        <li>\(\displaystyle f(x) = \frac{2}{x^3}\)</li><br>
+        <li>\(\displaystyle y = \frac{8}{x^5}\)</li><br>
+        <li>\(\displaystyle y = \frac{1}{4x^5}\)</li><br>
+        <li>\(\displaystyle g(x) = \frac{4}{3x^3}\)</li><br>
+        <li>\(\displaystyle y = \frac{1}{x^2}\)</li><br>
+        <li>\(\displaystyle f(t) = \frac{1}{2t}\)</li><br>
+        <li>\(\displaystyle g(x) = \frac{7}{9x}\)</li><br>
+        <li>\(\displaystyle y = \frac{7}{x} + \frac{7}{x}\)</li><br>
+        <li>\(\displaystyle \Phi(x) = \frac{x^3}{3} - \frac{3}{x^7}\)</li><br>
+        <li>\(\displaystyle f(x) = -9x^{1/3} + 5x^{-2/5}\)</li><br>
+        <li>\(\displaystyle f(x) = 3x^{1/4} - 12x^{-8} - 8x^{-3/4}\)</li><br>
+        <li>\(\displaystyle f(x) = \frac{3}{4\sqrt{x^3}}\)</li><br>
+        <li>\(\displaystyle q(x) = \frac{1}{\sqrt{8x^2}}\)</li><br>
+        <li>\(\displaystyle y = \frac{1}{2\sqrt{x}}\)</li><br>
+        <li>\(\displaystyle y = \frac{2}{\sqrt{x}}\)</li><br>
+        <li>\(\displaystyle f(x) = x^2\sqrt{x}\)</li><br>
+        <li>\(\displaystyle f(x) = (2x^3)(4x^2)\)</li><br>
+        <li>\(\displaystyle f(x) = x(3x^2 - 10x + 7)\)</li><br>
+        <li>\(\displaystyle y = x^3(6x - 5x^2 + 4)\)</li><br>
+        <li>\(\displaystyle g(x) = (3x^3)(2x)\)</li><br>
+        <!-- <li>\(\displaystyle g(x) = \sqrt{(4x^6 + 6x + 3)}\)</li><br> -->
+        <li>\(\displaystyle f(x) = x^{-2/3}(2x + 5)\)</li><br>
+        <li>\(\displaystyle f(x) = x^{3/5}(2x + 7x + 11)\)</li><br>
+        <li>\(\displaystyle f(g) = \frac{3q^2 + 4q - 2}{q}\)</li><br>
+        <li>\(\displaystyle f(x) = x^2(x - 2)(x + 4)\)</li><br>
+        <li>\(\displaystyle f(x) = (x + 1)(x + 3)\)</li><br>
+        <li>\(\displaystyle f(x) = \frac{w - 5}{w^5}\)</li>
+          </ol>
+        </p>
+      </div>
 
 </body>
